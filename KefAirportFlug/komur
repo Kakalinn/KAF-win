@@ -1392,7 +1392,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
 								<td>FI622</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Sta&#240;fest 07:53</td>
+								<td>Lent 07:42</td>
 								<td>
 <a href="#" data-flight="2018/06/22 05:55 GMT+00:00|FI622" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 05:55 GMT+00:00|FI622" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
@@ -1548,21 +1548,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="ORD" data-flight-id="498519" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="ORD" data-flight-id="498519" data-landeddeparted="True">
 								<td>06:35</td>
 								<td><span class="cutoff" title="Chicago">Chicago</span></td>
 								<td>FI852</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
 								<td>Lent 07:02</td>
 								<td>
-<a href="#" data-flight="2018/06/22 06:35 GMT+00:00|FI852" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/06/22 06:35 GMT+00:00|FI852" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
 							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="SFO" data-flight-id="498520" data-landeddeparted="True">
@@ -1592,7 +1586,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
 								<td>UA138</td>
 								<td class="hidden-sm"><span class="cutoff" title="United Airlines">United Airlines</span></td>
-								<td>Sta&#240;fest 08:22</td>
+								<td>Sta&#240;fest 08:10</td>
 								<td>
 <a href="#" data-flight="2018/06/22 08:10 GMT+00:00|UA138" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 08:10 GMT+00:00|UA138" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
@@ -1745,7 +1739,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="London Heathrow">London Heathrow</span></td>
 								<td>BA800</td>
 								<td class="hidden-sm"><span class="cutoff" title="British Airways">British Airways</span></td>
-								<td>&#193;&#230;tlu&#240; koma 10:14</td>
+								<td>Sta&#240;fest 10:14</td>
 								<td>
 <a href="#" data-flight="2018/06/22 09:50 GMT+00:00|BA800" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 09:50 GMT+00:00|BA800" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
@@ -1779,7 +1773,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="Cleveland">Cleveland</span></td>
 								<td>WW114</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 10:35</td>
+								<td>Sta&#240;fest 10:41</td>
 								<td>
 <a href="#" data-flight="2018/06/22 10:35 GMT+00:00|WW114" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 10:35 GMT+00:00|WW114" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
@@ -1864,7 +1858,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="Chicago">Chicago</span></td>
 								<td>WW156</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 11:27</td>
+								<td>Sta&#240;fest 11:18</td>
 								<td>
 <a href="#" data-flight="2018/06/22 11:00 GMT+00:00|WW156" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 11:00 GMT+00:00|WW156" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
@@ -1881,7 +1875,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="Bergen">Bergen</span></td>
 								<td>DY1172</td>
 								<td class="hidden-sm"><span class="cutoff" title="Norwegian">Norwegian</span></td>
-								<td></td>
+								<td>&#193;&#230;tlu&#240; koma 11:51</td>
 								<td>
 <a href="#" data-flight="2018/06/22 11:50 GMT+00:00|DY1172" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 11:50 GMT+00:00|DY1172" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
@@ -1915,7 +1909,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="Tel Aviv">Tel Aviv</span></td>
 								<td>WW699</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 13:51</td>
+								<td>Sta&#240;fest 13:51</td>
 								<td>
 <a href="#" data-flight="2018/06/22 13:10 GMT+00:00|WW699" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 13:10 GMT+00:00|WW699" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
@@ -2153,7 +2147,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="Glasgow">Glasgow</span></td>
 								<td>FI431</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>&#193;&#230;tlu&#240; koma 15:22</td>
+								<td>&#193;&#230;tlu&#240; koma 15:16</td>
 								<td>
 <a href="#" data-flight="2018/06/22 15:00 GMT+00:00|FI431" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 15:00 GMT+00:00|FI431" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
