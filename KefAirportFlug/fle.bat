@@ -1,4 +1,5 @@
 del komur
 wget "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur"
-stable > out.fly
+echo %date:~5% -%time:~0,-3% > out.fly
+stable >> out.fly
 

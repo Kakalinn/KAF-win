@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <title>Farþegaflug: Komur | Keflavíkurflugvöllur</title>
-<link href="/static/css/airport.min.css?119" rel="stylesheet">
+<link href="/static/css/airport.min.css?127" rel="stylesheet">
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <meta name="description" content="Rauntímaupplýsingar um komutíma farþegarflugs til Keflavíkurflugvallar.">
 <meta name="og:type" content="website">
@@ -534,8 +534,11 @@
 
 		<div class="weather-widget hidden-xs hidden-md">
 			<div class="temperature">8 °C</div>
+			<div class="icon">
+				<i class="weather-light-drizzle align-middle"></i>
+			</div>
 			<div class="wind">
-				5 m/s
+				8 m/s
 			</div>
 		</div>
 
@@ -995,8 +998,8 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 </h2>
 						</div>
 						<div class="col-sm-6 text-right">
-							<a href="/keflavikurflugvollur/flugaaetlun/brottfarir" class="btn btn-rounded btn-outline "><i class="icon icon-white icon-planedeparting"></i> Brottfarir</a>
 							<a href="/keflavikurflugvollur/flugaaetlun/komur" class="btn btn-rounded btn-outline btn-active"><i class="icon icon-white icon-planearrivals"></i> Komur</a>
+							<a href="/keflavikurflugvollur/flugaaetlun/brottfarir" class="btn btn-rounded btn-outline "><i class="icon icon-white icon-planedeparting"></i> Brottfarir</a>
 						</div>
 					</div>
 				</div>
@@ -1012,7 +1015,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 						<div class="col-xs-12 text-right">
 
 
-							<a href="#">Í dag 26. ma&#237; <i class="icon icon-orange icon-down-open-big"></i></a>
+							<a href="#">Í dag 22. j&#250;n. <i class="icon icon-orange icon-down-open-big"></i></a>
 						</div>
 					</div>
 					<div class="row schedule-filter">
@@ -1029,57 +1032,62 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<div class="form-group has-feedback">
 										<select class="form-control" id="origindest" aria-label="Áfangastaðir">
 											<option value="">Allir áfangastaðir</option>
+<option value="ALC">Alicante</option>
 <option value="AMS">Amsterdam</option>
+<option value="ANC">Anchorage</option>
 <option value="BWI">Baltimore Washington</option>
-<option value="BCN">Barcelona</option>
-<option value="BSL">Basel Mulhouse</option>
 <option value="BGO">Bergen</option>
 <option value="SXF">Berlin Schoenefeld</option>
 <option value="TXL">Berlin Tegel</option>
 <option value="BLL">Billund</option>
 <option value="BOS">Boston</option>
 <option value="BRU">Brussels</option>
-<option value="BUD">Budapest</option>
 <option value="ORD">Chicago</option>
-<option value="CVG">Cincinnati Northern Kentucky</option>
 <option value="CLE">Cleveland</option>
+<option value="CGN">Cologne Bonn</option>
 <option value="CPH">Copenhagen</option>
+<option value="DFW">Dallas</option>
 <option value="DEN">Denver</option>
-<option value="DTW">Detroit Metro Wayne Co</option>
 <option value="DUB">Dublin</option>
-<option value="YEG">Edmonton</option>
 <option value="FRA">Frankfurt</option>
-<option value="GDN">Gdansk</option>
-<option value="GVA">Geneva</option>
 <option value="GLA">Glasgow</option>
+<option value="YHZ">Halifax</option>
 <option value="HAM">Hamburg</option>
 <option value="HEL">Helsinki</option>
 <option value="LGW">London Gatwick</option>
 <option value="LHR">London Heathrow</option>
+<option value="LTN">London Luton</option>
 <option value="STN">London Stansted</option>
 <option value="LAX">Los Angeles</option>
+<option value="LYS">Lyon</option>
 <option value="MAD">Madrid</option>
+<option value="AGP">Malaga</option>
+<option value="MAN">Manchester</option>
 <option value="MXP">Milan Malpensa</option>
 <option value="MSP">Minneapolis St Paul</option>
 <option value="YUL">Montreal</option>
 <option value="MUC">Munich</option>
 <option value="JFK">New York JFK</option>
 <option value="EWR">New York Newark</option>
-<option value="GOH">Nuuk</option>
-<option value="MCO">Orlando</option>
 <option value="OSL">Oslo</option>
 <option value="CDG">Paris CDG</option>
 <option value="ORY">Paris Orly</option>
+<option value="PHL">Philadelphia</option>
 <option value="PIT">Pittsburgh</option>
 <option value="PDX">Portland</option>
-<option value="RIX">Riga Intl</option>
+<option value="POZ">Poznan</option>
 <option value="SFO">San Francisco</option>
 <option value="SEA">Seattle</option>
+<option value="STL">St Louis</option>
 <option value="ARN">Stockholm Arlanda</option>
-<option value="TFS">Tenerife</option>
+<option value="TLV">Tel Aviv</option>
 <option value="YYZ">Toronto</option>
 <option value="YVR">Vancouver</option>
+<option value="VIE">Vienna</option>
+<option value="VNO">Vilnius</option>
+<option value="WAW">Warsaw</option>
 <option value="IAD">Washington Dulles</option>
+<option value="WRO">Wroclaw</option>
 <option value="ZRH">Zurich</option>
 										</select>
 										<span class="icon-down-open-big form-control-feedback"></span>
@@ -1089,17 +1097,21 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<div class="form-group has-feedback">
 										<select class="form-control" id="airline" aria-label="Flugfélög">
 											<option value="">Öll flugfélög</option>
-<option value="BT">Air Baltic</option>
-<option value="GL">Air Greenland</option>
+<option value="AC">Air Canada</option>
+<option value="AA">American Airlines</option>
+<option value="OS">Austrian</option>
 <option value="BA">British Airways</option>
 <option value="DL">Delta Air Lines</option>
-<option value="EZS">EasyJet</option>
+<option value="EZY">EasyJet</option>
+<option value="WK">Edelweiss</option>
+<option value="EW">Eurowings</option>
 <option value="AY">Finnair</option>
+<option value="I2">Iberia Express</option>
 <option value="FI">Icelandair</option>
 <option value="LH">Lufthansa</option>
-<option value="D8">Norwegian</option>
+<option value="DY">Norwegian</option>
+<option value="6F">Primera Air</option>
 <option value="SK">SAS</option>
-<option value="TO">Transavia.com France</option>
 <option value="UA">United Airlines</option>
 <option value="W6">Wizz Air</option>
 <option value="WW">WOW air</option>
@@ -1144,32 +1156,120 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<tbody>
 
 
-							<tr class="schedule-items-entry" data-airline="TO" data-hour="0" data-origindest="ORY" data-flight-id="482144" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="LH" data-hour="0" data-origindest="MUC" data-flight-id="498483" data-landeddeparted="True">
 								<td>00:05</td>
-								<td><span class="cutoff" title="Paris Orly">Paris Orly</span></td>
-								<td>TO4040</td>
-								<td class="hidden-sm"><span class="cutoff" title="Transavia.com France">Transavia.com France</span></td>
-								<td>Lent 23:48</td>
+								<td><span class="cutoff" title="Munich">Munich</span></td>
+								<td>LH2468</td>
+								<td class="hidden-sm"><span class="cutoff" title="Lufthansa">Lufthansa</span></td>
+								<td>Lent 00:46</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="1" data-origindest="BCN" data-flight-id="482145" data-landeddeparted="True">
-								<td>01:45</td>
-								<td><span class="cutoff" title="Barcelona">Barcelona</span></td>
-								<td>WW625</td>
+							<tr class="schedule-items-entry" data-airline="EW" data-hour="0" data-origindest="CGN" data-flight-id="498484" data-landeddeparted="True">
+								<td>00:15</td>
+								<td><span class="cutoff" title="Cologne Bonn">Cologne Bonn</span></td>
+								<td>EW880</td>
+								<td class="hidden-sm"><span class="cutoff" title="Eurowings">Eurowings</span></td>
+								<td>Lent 00:50</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="0" data-origindest="MAD" data-flight-id="498485" data-landeddeparted="True">
+								<td>00:25</td>
+								<td><span class="cutoff" title="Madrid">Madrid</span></td>
+								<td>FI595</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 01:24</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="I2" data-hour="1" data-origindest="MAD" data-flight-id="498486" data-landeddeparted="True">
+								<td>01:05</td>
+								<td><span class="cutoff" title="Madrid">Madrid</span></td>
+								<td>I23660</td>
+								<td class="hidden-sm"><span class="cutoff" title="Iberia Express">Iberia Express</span></td>
+								<td>Lent 01:09</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="2" data-origindest="ALC" data-flight-id="498487" data-landeddeparted="True">
+								<td>02:00</td>
+								<td><span class="cutoff" title="Alicante">Alicante</span></td>
+								<td>WW617</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 02:17</td>
+								<td>Lent 01:43</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="BOS" data-flight-id="482146" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="2" data-origindest="MXP" data-flight-id="498488" data-landeddeparted="True">
+								<td>02:20</td>
+								<td><span class="cutoff" title="Milan Malpensa">Milan Malpensa</span></td>
+								<td>WW655</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>Lent 02:55</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="BOS" data-flight-id="498489" data-landeddeparted="True">
 								<td>04:30</td>
 								<td><span class="cutoff" title="Boston">Boston</span></td>
 								<td>WW126</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>Lent 04:17</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="6F" data-hour="4" data-origindest="ALC" data-flight-id="498490" data-landeddeparted="True">
+								<td>04:30</td>
+								<td><span class="cutoff" title="Alicante">Alicante</span></td>
+								<td>6F108</td>
+								<td class="hidden-sm"><span class="cutoff" title="Primera Air">Primera Air</span></td>
+								<td>Lent 04:22</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="4" data-origindest="YHZ" data-flight-id="498493" data-landeddeparted="True">
+								<td>04:45</td>
+								<td><span class="cutoff" title="Halifax">Halifax</span></td>
+								<td>FI606</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 04:15</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="PIT" data-flight-id="498494" data-landeddeparted="True">
+								<td>04:45</td>
+								<td><span class="cutoff" title="Pittsburgh">Pittsburgh</span></td>
+								<td>WW148</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>Lent 05:04</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="YYZ" data-flight-id="498495" data-landeddeparted="True">
+								<td>04:45</td>
+								<td><span class="cutoff" title="Toronto">Toronto</span></td>
+								<td>WW214</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
 								<td>Lent 04:43</td>
 								<td>
@@ -1177,51 +1277,40 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="YYZ" data-flight-id="482147" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="DFW" data-flight-id="498496" data-landeddeparted="True">
 								<td>04:45</td>
-								<td><span class="cutoff" title="Toronto">Toronto</span></td>
-								<td>WW214</td>
+								<td><span class="cutoff" title="Dallas">Dallas</span></td>
+								<td>WW192</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 04:47</td>
+								<td>Lent 04:32</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="PIT" data-flight-id="482148" data-landeddeparted="True">
-								<td>04:45</td>
-								<td><span class="cutoff" title="Pittsburgh">Pittsburgh</span></td>
-								<td>WW148</td>
-								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 04:41</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="EWR" data-flight-id="482149" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="4" data-origindest="EWR" data-flight-id="498497" data-landeddeparted="True">
 								<td>04:55</td>
 								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
 								<td>WW104</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 04:18</td>
+								<td>Lent 04:56</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="5" data-origindest="BWI" data-flight-id="482152" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="5" data-origindest="BWI" data-flight-id="498498" data-landeddeparted="True">
 								<td>05:00</td>
 								<td><span class="cutoff" title="Baltimore Washington">Baltimore Washington</span></td>
 								<td>WW118</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 05:12</td>
+								<td>Lent 05:05</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="5" data-origindest="YUL" data-flight-id="482153" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="5" data-origindest="YUL" data-flight-id="498499" data-landeddeparted="True">
 								<td>05:00</td>
 								<td><span class="cutoff" title="Montreal">Montreal</span></td>
 								<td>WW252</td>
@@ -1232,43 +1321,148 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="SEA" data-flight-id="482156" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="DFW" data-flight-id="498500" data-landeddeparted="True">
 								<td>05:10</td>
-								<td><span class="cutoff" title="Seattle">Seattle</span></td>
-								<td>FI682</td>
+								<td><span class="cutoff" title="Dallas">Dallas</span></td>
+								<td>FI872</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:27</td>
+								<td>Lent 04:53</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="BOS" data-flight-id="482157" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="IAD" data-flight-id="498501" data-landeddeparted="True">
+								<td>05:10</td>
+								<td><span class="cutoff" title="Washington Dulles">Washington Dulles</span></td>
+								<td>FI648</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 06:31</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="YUL" data-flight-id="498502" data-landeddeparted="True">
+								<td>05:15</td>
+								<td><span class="cutoff" title="Montreal">Montreal</span></td>
+								<td>FI804</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 05:00</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="SEA" data-flight-id="498503" data-landeddeparted="True">
+								<td>05:20</td>
+								<td><span class="cutoff" title="Seattle">Seattle</span></td>
+								<td>FI682</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 05:15</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="BOS" data-flight-id="498504" data-landeddeparted="True">
 								<td>05:45</td>
 								<td><span class="cutoff" title="Boston">Boston</span></td>
 								<td>FI632</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:12</td>
+								<td>Lent 05:24</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="JFK" data-flight-id="482158" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="ANC" data-flight-id="498505" data-landeddeparted="True">
+								<td>05:50</td>
+								<td><span class="cutoff" title="Anchorage">Anchorage</span></td>
+								<td>FI678</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 05:27</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="EWR" data-flight-id="498506" data-landeddeparted="False">
+								<td>05:55</td>
+								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
+								<td>FI622</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Sta&#240;fest 07:53</td>
+								<td>
+<a href="#" data-flight="2018/06/22 05:55 GMT+00:00|FI622" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 05:55 GMT+00:00|FI622" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="JFK" data-flight-id="498507" data-landeddeparted="True">
 								<td>05:55</td>
 								<td><span class="cutoff" title="New York JFK">New York JFK</span></td>
 								<td>FI614</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 05:55</td>
+								<td>Lent 06:20</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="5" data-origindest="EWR" data-flight-id="482159" data-landeddeparted="True">
-								<td>05:55</td>
-								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
-								<td>FI622</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="YVR" data-flight-id="498508" data-landeddeparted="True">
+								<td>06:00</td>
+								<td><span class="cutoff" title="Vancouver">Vancouver</span></td>
+								<td>FI696</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 05:41</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="PDX" data-flight-id="498509" data-landeddeparted="True">
+								<td>06:05</td>
+								<td><span class="cutoff" title="Portland">Portland</span></td>
+								<td>FI664</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 05:58</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="PHL" data-flight-id="498510" data-landeddeparted="True">
+								<td>06:10</td>
+								<td><span class="cutoff" title="Philadelphia">Philadelphia</span></td>
+								<td>FI828</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 05:32</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="SEA" data-flight-id="498511" data-landeddeparted="True">
+								<td>06:15</td>
+								<td><span class="cutoff" title="Seattle">Seattle</span></td>
+								<td>FI680</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 06:17</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="DEN" data-flight-id="498512" data-landeddeparted="True">
+								<td>06:15</td>
+								<td><span class="cutoff" title="Denver">Denver</span></td>
+								<td>FI670</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
 								<td>Lent 06:01</td>
 								<td>
@@ -1276,334 +1470,404 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="YVR" data-flight-id="482160" data-landeddeparted="True">
-								<td>06:00</td>
-								<td><span class="cutoff" title="Vancouver">Vancouver</span></td>
-								<td>FI696</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="IAD" data-flight-id="498513" data-landeddeparted="True">
+								<td>06:20</td>
+								<td><span class="cutoff" title="Washington Dulles">Washington Dulles</span></td>
+								<td>FI644</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 05:45</td>
+								<td>Lent 06:24</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="PDX" data-flight-id="482161" data-landeddeparted="True">
-								<td>06:05</td>
-								<td><span class="cutoff" title="Portland">Portland</span></td>
-								<td>FI664</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="ORD" data-flight-id="498514" data-landeddeparted="True">
+								<td>06:20</td>
+								<td><span class="cutoff" title="Chicago">Chicago</span></td>
+								<td>FI854</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:16</td>
+								<td>Lent 06:24</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="MCO" data-flight-id="482162" data-landeddeparted="True">
-								<td>06:10</td>
-								<td><span class="cutoff" title="Orlando">Orlando</span></td>
-								<td>FI688</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="JFK" data-flight-id="498515" data-landeddeparted="False">
+								<td>06:20</td>
+								<td><span class="cutoff" title="New York JFK">New York JFK</span></td>
+								<td>FI616</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:08</td>
+								<td>Lent 07:17</td>
+								<td>
+<a href="#" data-flight="2018/06/22 06:20 GMT+00:00|FI616" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 06:20 GMT+00:00|FI616" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="YYZ" data-flight-id="498516" data-landeddeparted="True">
+								<td>06:20</td>
+								<td><span class="cutoff" title="Toronto">Toronto</span></td>
+								<td>FI602</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 06:10</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="DEN" data-flight-id="482163" data-landeddeparted="True">
-								<td>06:15</td>
-								<td><span class="cutoff" title="Denver">Denver</span></td>
-								<td>FI670</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="MSP" data-flight-id="498517" data-landeddeparted="False">
+								<td>06:30</td>
+								<td><span class="cutoff" title="Minneapolis St Paul">Minneapolis St Paul</span></td>
+								<td>FI656</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:26</td>
+								<td>Lent 07:15</td>
+								<td>
+<a href="#" data-flight="2018/06/22 06:30 GMT+00:00|FI656" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 06:30 GMT+00:00|FI656" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="BOS" data-flight-id="498518" data-landeddeparted="True">
+								<td>06:30</td>
+								<td><span class="cutoff" title="Boston">Boston</span></td>
+								<td>FI630</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 06:35</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="SEA" data-flight-id="482164" data-landeddeparted="True">
-								<td>06:15</td>
-								<td><span class="cutoff" title="Seattle">Seattle</span></td>
-								<td>FI680</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="ORD" data-flight-id="498519" data-landeddeparted="False">
+								<td>06:35</td>
+								<td><span class="cutoff" title="Chicago">Chicago</span></td>
+								<td>FI852</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 07:02</td>
+								<td>
+<a href="#" data-flight="2018/06/22 06:35 GMT+00:00|FI852" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 06:35 GMT+00:00|FI852" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="SFO" data-flight-id="498520" data-landeddeparted="True">
+								<td>06:40</td>
+								<td><span class="cutoff" title="San Francisco">San Francisco</span></td>
+								<td>FI862</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>Lent 06:32</td>
+								<td>
+</td>
+								<td class="hidden-xs">
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="DL" data-hour="6" data-origindest="JFK" data-flight-id="498522" data-landeddeparted="True">
+								<td>06:50</td>
+								<td><span class="cutoff" title="New York JFK">New York JFK</span></td>
+								<td>DL446</td>
+								<td class="hidden-sm"><span class="cutoff" title="Delta Air Lines">Delta Air Lines</span></td>
 								<td>Lent 06:37</td>
 								<td>
 </td>
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="ORD" data-flight-id="482165" data-landeddeparted="True">
-								<td>06:20</td>
-								<td><span class="cutoff" title="Chicago">Chicago</span></td>
-								<td>FI854</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:33</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="YYZ" data-flight-id="482166" data-landeddeparted="True">
-								<td>06:20</td>
-								<td><span class="cutoff" title="Toronto">Toronto</span></td>
-								<td>FI602</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:18</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="IAD" data-flight-id="482167" data-landeddeparted="True">
-								<td>06:20</td>
-								<td><span class="cutoff" title="Washington Dulles">Washington Dulles</span></td>
-								<td>FI644</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:33</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="CLE" data-flight-id="482168" data-landeddeparted="True">
-								<td>06:25</td>
-								<td><span class="cutoff" title="Cleveland">Cleveland</span></td>
-								<td>FI836</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:26</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="IAD" data-flight-id="482169" data-landeddeparted="True">
-								<td>06:25</td>
-								<td><span class="cutoff" title="Washington Dulles">Washington Dulles</span></td>
-								<td>FI648</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:39</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="BOS" data-flight-id="482170" data-landeddeparted="True">
-								<td>06:30</td>
-								<td><span class="cutoff" title="Boston">Boston</span></td>
-								<td>FI630</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:27</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="MSP" data-flight-id="482171" data-landeddeparted="True">
-								<td>06:30</td>
-								<td><span class="cutoff" title="Minneapolis St Paul">Minneapolis St Paul</span></td>
-								<td>FI656</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:52</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="ORD" data-flight-id="482172" data-landeddeparted="True">
-								<td>06:35</td>
-								<td><span class="cutoff" title="Chicago">Chicago</span></td>
-								<td>FI852</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:42</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="YEG" data-flight-id="482173" data-landeddeparted="True">
-								<td>06:40</td>
-								<td><span class="cutoff" title="Edmonton">Edmonton</span></td>
-								<td>FI692</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 06:48</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="MSP" data-flight-id="482174" data-landeddeparted="True">
-								<td>06:40</td>
-								<td><span class="cutoff" title="Minneapolis St Paul">Minneapolis St Paul</span></td>
-								<td>FI658</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 07:11</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="DL" data-hour="6" data-origindest="JFK" data-flight-id="482175" data-landeddeparted="True">
-								<td>06:50</td>
-								<td><span class="cutoff" title="New York JFK">New York JFK</span></td>
-								<td>DL446</td>
-								<td class="hidden-sm"><span class="cutoff" title="Delta Air Lines">Delta Air Lines</span></td>
-								<td>Lent 06:47</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="UA" data-hour="8" data-origindest="EWR" data-flight-id="482176" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="UA" data-hour="8" data-origindest="EWR" data-flight-id="498524" data-landeddeparted="False">
 								<td>08:10</td>
 								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
 								<td>UA138</td>
 								<td class="hidden-sm"><span class="cutoff" title="United Airlines">United Airlines</span></td>
-								<td>Lent 07:59</td>
+								<td>Sta&#240;fest 08:22</td>
 								<td>
+<a href="#" data-flight="2018/06/22 08:10 GMT+00:00|UA138" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 08:10 GMT+00:00|UA138" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="D8" data-hour="8" data-origindest="MAD" data-flight-id="482177" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="AC" data-hour="8" data-origindest="YYZ" data-flight-id="498525" data-landeddeparted="False">
+								<td>08:30</td>
+								<td><span class="cutoff" title="Toronto">Toronto</span></td>
+								<td>AC816</td>
+								<td class="hidden-sm"><span class="cutoff" title="Air Canada">Air Canada</span></td>
+								<td>Sta&#240;fest 09:02</td>
+								<td>
+<a href="#" data-flight="2018/06/22 08:30 GMT+00:00|AC816" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 08:30 GMT+00:00|AC816" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="EZY" data-hour="8" data-origindest="LTN" data-flight-id="498526" data-landeddeparted="False">
+								<td>08:35</td>
+								<td><span class="cutoff" title="London Luton">London Luton</span></td>
+								<td>EZY2295</td>
+								<td class="hidden-sm"><span class="cutoff" title="EasyJet">EasyJet</span></td>
+								<td>Sta&#240;fest 08:33</td>
+								<td>
+<a href="#" data-flight="2018/06/22 08:35 GMT+00:00|EZY2295" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 08:35 GMT+00:00|EZY2295" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="AY" data-hour="8" data-origindest="HEL" data-flight-id="498527" data-landeddeparted="False">
+								<td>08:35</td>
+								<td><span class="cutoff" title="Helsinki">Helsinki</span></td>
+								<td>AY991</td>
+								<td class="hidden-sm"><span class="cutoff" title="Finnair">Finnair</span></td>
+								<td>Sta&#240;fest 08:15</td>
+								<td>
+<a href="#" data-flight="2018/06/22 08:35 GMT+00:00|AY991" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 08:35 GMT+00:00|AY991" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="EZY" data-hour="8" data-origindest="LGW" data-flight-id="498528" data-landeddeparted="False">
 								<td>08:45</td>
-								<td><span class="cutoff" title="Madrid">Madrid</span></td>
-								<td>D86240</td>
-								<td class="hidden-sm"><span class="cutoff" title="Norwegian">Norwegian</span></td>
-								<td>Lent 09:03</td>
+								<td><span class="cutoff" title="London Gatwick">London Gatwick</span></td>
+								<td>EZY8507</td>
+								<td class="hidden-sm"><span class="cutoff" title="EasyJet">EasyJet</span></td>
+								<td>Sta&#240;fest 08:47</td>
 								<td>
+<a href="#" data-flight="2018/06/22 08:45 GMT+00:00|EZY8507" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 08:45 GMT+00:00|EZY8507" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="DL" data-hour="9" data-origindest="MSP" data-flight-id="482178" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="W6" data-hour="9" data-origindest="LTN" data-flight-id="498529" data-landeddeparted="False">
+								<td>09:10</td>
+								<td><span class="cutoff" title="London Luton">London Luton</span></td>
+								<td>W64497</td>
+								<td class="hidden-sm"><span class="cutoff" title="Wizz Air">Wizz Air</span></td>
+								<td>Sta&#240;fest 09:51</td>
+								<td>
+<a href="#" data-flight="2018/06/22 09:10 GMT+00:00|W64497" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 09:10 GMT+00:00|W64497" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="DL" data-hour="9" data-origindest="MSP" data-flight-id="498530" data-landeddeparted="False">
 								<td>09:10</td>
 								<td><span class="cutoff" title="Minneapolis St Paul">Minneapolis St Paul</span></td>
 								<td>DL260</td>
 								<td class="hidden-sm"><span class="cutoff" title="Delta Air Lines">Delta Air Lines</span></td>
-								<td>Lent 09:02</td>
+								<td>Sta&#240;fest 08:41</td>
 								<td>
+<a href="#" data-flight="2018/06/22 09:10 GMT+00:00|DL260" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 09:10 GMT+00:00|DL260" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="SK" data-hour="9" data-origindest="CPH" data-flight-id="482179" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="AA" data-hour="9" data-origindest="DFW" data-flight-id="498532" data-landeddeparted="False">
 								<td>09:15</td>
+								<td><span class="cutoff" title="Dallas">Dallas</span></td>
+								<td>AA232</td>
+								<td class="hidden-sm"><span class="cutoff" title="American Airlines">American Airlines</span></td>
+								<td>Sta&#240;fest 09:03</td>
+								<td>
+<a href="#" data-flight="2018/06/22 09:15 GMT+00:00|AA232" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 09:15 GMT+00:00|AA232" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="SK" data-hour="9" data-origindest="CPH" data-flight-id="498533" data-landeddeparted="False">
+								<td>09:45</td>
 								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
 								<td>SK595</td>
 								<td class="hidden-sm"><span class="cutoff" title="SAS">SAS</span></td>
-								<td>Afl&#253;st</td>
+								<td>Sta&#240;fest 09:48</td>
 								<td>
+<a href="#" data-flight="2018/06/22 09:45 GMT+00:00|SK595" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 09:45 GMT+00:00|SK595" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="W6" data-hour="9" data-origindest="BUD" data-flight-id="482180" data-landeddeparted="True">
-								<td>09:40</td>
-								<td><span class="cutoff" title="Budapest">Budapest</span></td>
-								<td>W62427</td>
-								<td class="hidden-sm"><span class="cutoff" title="Wizz Air">Wizz Air</span></td>
-								<td>Lent 11:29</td>
+							<tr class="schedule-items-entry" data-airline="BA" data-hour="9" data-origindest="LHR" data-flight-id="498534" data-landeddeparted="False">
+								<td>09:50</td>
+								<td><span class="cutoff" title="London Heathrow">London Heathrow</span></td>
+								<td>BA800</td>
+								<td class="hidden-sm"><span class="cutoff" title="British Airways">British Airways</span></td>
+								<td>&#193;&#230;tlu&#240; koma 10:14</td>
 								<td>
+<a href="#" data-flight="2018/06/22 09:50 GMT+00:00|BA800" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 09:50 GMT+00:00|BA800" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="SFO" data-flight-id="482181" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="SFO" data-flight-id="498535" data-landeddeparted="False">
 								<td>10:30</td>
 								<td><span class="cutoff" title="San Francisco">San Francisco</span></td>
 								<td>WW162</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 10:56</td>
+								<td>Sta&#240;fest 11:07</td>
 								<td>
+<a href="#" data-flight="2018/06/22 10:30 GMT+00:00|WW162" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 10:30 GMT+00:00|WW162" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="JFK" data-flight-id="482182" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="CLE" data-flight-id="498536" data-landeddeparted="False">
+								<td>10:35</td>
+								<td><span class="cutoff" title="Cleveland">Cleveland</span></td>
+								<td>WW114</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>&#193;&#230;tlu&#240; koma 10:35</td>
+								<td>
+<a href="#" data-flight="2018/06/22 10:35 GMT+00:00|WW114" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 10:35 GMT+00:00|WW114" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="STL" data-flight-id="498537" data-landeddeparted="False">
+								<td>10:40</td>
+								<td><span class="cutoff" title="St Louis">St Louis</span></td>
+								<td>WW168</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>Sta&#240;fest 10:52</td>
+								<td>
+<a href="#" data-flight="2018/06/22 10:40 GMT+00:00|WW168" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 10:40 GMT+00:00|WW168" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="EWR" data-flight-id="498538" data-landeddeparted="False">
+								<td>10:45</td>
+								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
+								<td>WW102</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>Sta&#240;fest 10:56</td>
+								<td>
+<a href="#" data-flight="2018/06/22 10:45 GMT+00:00|WW102" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 10:45 GMT+00:00|WW102" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="JFK" data-flight-id="498539" data-landeddeparted="False">
 								<td>10:45</td>
 								<td><span class="cutoff" title="New York JFK">New York JFK</span></td>
 								<td>WW110</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 10:39</td>
+								<td>Sta&#240;fest 10:55</td>
 								<td>
+<a href="#" data-flight="2018/06/22 10:45 GMT+00:00|WW110" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 10:45 GMT+00:00|WW110" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="BWI" data-flight-id="482183" data-landeddeparted="True">
-								<td>10:50</td>
-								<td><span class="cutoff" title="Baltimore Washington">Baltimore Washington</span></td>
-								<td>WW116</td>
-								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 10:23</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="DTW" data-flight-id="482184" data-landeddeparted="True">
-								<td>10:50</td>
-								<td><span class="cutoff" title="Detroit Metro Wayne Co">Detroit Metro Wayne Co</span></td>
-								<td>WW122</td>
-								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 10:49</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="LAX" data-flight-id="482185" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="10" data-origindest="LAX" data-flight-id="498540" data-landeddeparted="False">
 								<td>10:55</td>
 								<td><span class="cutoff" title="Los Angeles">Los Angeles</span></td>
 								<td>WW174</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 10:29</td>
+								<td>Sta&#240;fest 11:08</td>
 								<td>
+<a href="#" data-flight="2018/06/22 10:55 GMT+00:00|WW174" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 10:55 GMT+00:00|WW174" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="11" data-origindest="ORD" data-flight-id="482186" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="11" data-origindest="ORD" data-flight-id="498541" data-landeddeparted="False">
 								<td>11:00</td>
 								<td><span class="cutoff" title="Chicago">Chicago</span></td>
 								<td>WW156</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 11:54</td>
+								<td>&#193;&#230;tlu&#240; koma 11:27</td>
 								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="11" data-origindest="CVG" data-flight-id="482187" data-landeddeparted="True">
-								<td>11:00</td>
-								<td><span class="cutoff" title="Cincinnati Northern Kentucky">Cincinnati Northern Kentucky</span></td>
-								<td>WW144</td>
-								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 11:20</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="13" data-origindest="GLA" data-flight-id="482188" data-landeddeparted="True">
-								<td>13:05</td>
-								<td><span class="cutoff" title="Glasgow">Glasgow</span></td>
-								<td>FI431</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 13:18</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="LH" data-hour="13" data-origindest="FRA" data-flight-id="482190" data-landeddeparted="False">
-								<td>13:20</td>
-								<td><span class="cutoff" title="Frankfurt">Frankfurt</span></td>
-								<td>LH856</td>
-								<td class="hidden-sm"><span class="cutoff" title="Lufthansa">Lufthansa</span></td>
-								<td>&#193;&#230;tlu&#240; koma 23:30</td>
-								<td>
-<a href="#" data-flight="2018/05/26 13:20 GMT+00:00|LH856" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 13:20 GMT+00:00|LH856" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 11:00 GMT+00:00|WW156" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 11:00 GMT+00:00|WW156" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -1612,136 +1876,321 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="DUB" data-flight-id="482191" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="DY" data-hour="11" data-origindest="BGO" data-flight-id="498542" data-landeddeparted="False">
+								<td>11:50</td>
+								<td><span class="cutoff" title="Bergen">Bergen</span></td>
+								<td>DY1172</td>
+								<td class="hidden-sm"><span class="cutoff" title="Norwegian">Norwegian</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 11:50 GMT+00:00|DY1172" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 11:50 GMT+00:00|DY1172" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="13" data-origindest="DUB" data-flight-id="498543" data-landeddeparted="False">
+								<td>13:05</td>
+								<td><span class="cutoff" title="Dublin">Dublin</span></td>
+								<td>FI417</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 13:27</td>
+								<td>
+<a href="#" data-flight="2018/06/22 13:05 GMT+00:00|FI417" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 13:05 GMT+00:00|FI417" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="TLV" data-flight-id="498544" data-landeddeparted="False">
+								<td>13:10</td>
+								<td><span class="cutoff" title="Tel Aviv">Tel Aviv</span></td>
+								<td>WW699</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>&#193;&#230;tlu&#240; koma 13:51</td>
+								<td>
+<a href="#" data-flight="2018/06/22 13:10 GMT+00:00|WW699" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 13:10 GMT+00:00|WW699" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="DUB" data-flight-id="498545" data-landeddeparted="False">
 								<td>13:25</td>
 								<td><span class="cutoff" title="Dublin">Dublin</span></td>
 								<td>WW853</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 13:23</td>
+								<td>&#193;&#230;tlu&#240; koma 12:05</td>
 								<td>
+<a href="#" data-flight="2018/06/22 13:25 GMT+00:00|WW853" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 13:25 GMT+00:00|WW853" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="AMS" data-flight-id="482192" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="AMS" data-flight-id="498546" data-landeddeparted="False">
 								<td>13:45</td>
 								<td><span class="cutoff" title="Amsterdam">Amsterdam</span></td>
 								<td>WW443</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 13:32</td>
+								<td></td>
 								<td>
+<a href="#" data-flight="2018/06/22 13:45 GMT+00:00|WW443" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 13:45 GMT+00:00|WW443" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="LGW" data-flight-id="482193" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="BRU" data-flight-id="498549" data-landeddeparted="False">
+								<td>13:50</td>
+								<td><span class="cutoff" title="Brussels">Brussels</span></td>
+								<td>WW463</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>&#193;&#230;tlu&#240; koma 14:05</td>
+								<td>
+<a href="#" data-flight="2018/06/22 13:50 GMT+00:00|WW463" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 13:50 GMT+00:00|WW463" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="13" data-origindest="LGW" data-flight-id="498550" data-landeddeparted="False">
 								<td>13:55</td>
 								<td><span class="cutoff" title="London Gatwick">London Gatwick</span></td>
 								<td>WW811</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 14:04</td>
+								<td></td>
 								<td>
+<a href="#" data-flight="2018/06/22 13:55 GMT+00:00|WW811" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 13:55 GMT+00:00|WW811" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="CPH" data-flight-id="482194" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="13" data-origindest="OSL" data-flight-id="498551" data-landeddeparted="False">
+								<td>13:55</td>
+								<td><span class="cutoff" title="Oslo">Oslo</span></td>
+								<td>FI323</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 14:29</td>
+								<td>
+<a href="#" data-flight="2018/06/22 13:55 GMT+00:00|FI323" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 13:55 GMT+00:00|FI323" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="14" data-origindest="BGO" data-flight-id="498552" data-landeddeparted="False">
+								<td>14:00</td>
+								<td><span class="cutoff" title="Bergen">Bergen</span></td>
+								<td>FI335</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 14:19</td>
+								<td>
+<a href="#" data-flight="2018/06/22 14:00 GMT+00:00|FI335" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:00 GMT+00:00|FI335" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="CPH" data-flight-id="498553" data-landeddeparted="False">
 								<td>14:00</td>
 								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
 								<td>WW903</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 13:50</td>
+								<td></td>
 								<td>
+<a href="#" data-flight="2018/06/22 14:00 GMT+00:00|WW903" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:00 GMT+00:00|WW903" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="BT" data-hour="14" data-origindest="RIX" data-flight-id="482195" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="ARN" data-flight-id="498554" data-landeddeparted="False">
 								<td>14:00</td>
-								<td><span class="cutoff" title="Riga Intl">Riga Intl</span></td>
-								<td>BT169</td>
-								<td class="hidden-sm"><span class="cutoff" title="Air Baltic">Air Baltic</span></td>
-								<td>Lent 13:45</td>
+								<td><span class="cutoff" title="Stockholm Arlanda">Stockholm Arlanda</span></td>
+								<td>WW943</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td></td>
 								<td>
+<a href="#" data-flight="2018/06/22 14:00 GMT+00:00|WW943" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:00 GMT+00:00|WW943" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="CDG" data-flight-id="482198" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="CDG" data-flight-id="498555" data-landeddeparted="False">
 								<td>14:10</td>
 								<td><span class="cutoff" title="Paris CDG">Paris CDG</span></td>
 								<td>WW405</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 13:47</td>
+								<td>&#193;&#230;tlu&#240; koma 14:07</td>
 								<td>
+<a href="#" data-flight="2018/06/22 14:10 GMT+00:00|WW405" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:10 GMT+00:00|WW405" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="14" data-origindest="BGO" data-flight-id="482199" data-landeddeparted="True">
-								<td>14:10</td>
-								<td><span class="cutoff" title="Bergen">Bergen</span></td>
-								<td>FI335</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 13:59</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="SXF" data-flight-id="482200" data-landeddeparted="True">
-								<td>14:15</td>
-								<td><span class="cutoff" title="Berlin Schoenefeld">Berlin Schoenefeld</span></td>
-								<td>WW721</td>
-								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 14:05</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="FRA" data-flight-id="482201" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="FRA" data-flight-id="498556" data-landeddeparted="False">
 								<td>14:15</td>
 								<td><span class="cutoff" title="Frankfurt">Frankfurt</span></td>
 								<td>WW761</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>Lent 14:28</td>
+								<td>&#193;&#230;tlu&#240; koma 14:34</td>
 								<td>
+<a href="#" data-flight="2018/06/22 14:15 GMT+00:00|WW761" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:15 GMT+00:00|WW761" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="BLL" data-flight-id="482202" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="LYS" data-flight-id="498557" data-landeddeparted="False">
+								<td>14:15</td>
+								<td><span class="cutoff" title="Lyon">Lyon</span></td>
+								<td>WW423</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 14:15 GMT+00:00|WW423" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:15 GMT+00:00|WW423" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="14" data-origindest="SXF" data-flight-id="498558" data-landeddeparted="False">
+								<td>14:15</td>
+								<td><span class="cutoff" title="Berlin Schoenefeld">Berlin Schoenefeld</span></td>
+								<td>WW721</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td>&#193;&#230;tlu&#240; koma 14:22</td>
+								<td>
+<a href="#" data-flight="2018/06/22 14:15 GMT+00:00|WW721" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:15 GMT+00:00|WW721" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="14" data-origindest="MAN" data-flight-id="498560" data-landeddeparted="False">
+								<td>14:50</td>
+								<td><span class="cutoff" title="Manchester">Manchester</span></td>
+								<td>FI441</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:08</td>
+								<td>
+<a href="#" data-flight="2018/06/22 14:50 GMT+00:00|FI441" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 14:50 GMT+00:00|FI441" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="GLA" data-flight-id="498561" data-landeddeparted="False">
+								<td>15:00</td>
+								<td><span class="cutoff" title="Glasgow">Glasgow</span></td>
+								<td>FI431</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:22</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:00 GMT+00:00|FI431" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:00 GMT+00:00|FI431" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="ARN" data-flight-id="498562" data-landeddeparted="False">
+								<td>15:00</td>
+								<td><span class="cutoff" title="Stockholm Arlanda">Stockholm Arlanda</span></td>
+								<td>FI309</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:05</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:00 GMT+00:00|FI309" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:00 GMT+00:00|FI309" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="BLL" data-flight-id="498564" data-landeddeparted="False">
 								<td>15:05</td>
 								<td><span class="cutoff" title="Billund">Billund</span></td>
 								<td>FI273</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 14:59</td>
+								<td>&#193;&#230;tlu&#240; koma 15:28</td>
 								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="AMS" data-flight-id="482203" data-landeddeparted="True">
-								<td>15:05</td>
-								<td><span class="cutoff" title="Amsterdam">Amsterdam</span></td>
-								<td>FI507</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:05</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="LHR" data-flight-id="482204" data-landeddeparted="False">
-								<td>15:10</td>
-								<td><span class="cutoff" title="London Heathrow">London Heathrow</span></td>
-								<td>FI451</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>&#193;&#230;tlu&#240; koma 19:29</td>
-								<td>
-<a href="#" data-flight="2018/05/26 15:10 GMT+00:00|FI451" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 15:10 GMT+00:00|FI451" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 15:05 GMT+00:00|FI273" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:05 GMT+00:00|FI273" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -1750,48 +2199,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="AMS" data-flight-id="482205" data-landeddeparted="True">
-								<td>15:10</td>
-								<td><span class="cutoff" title="Amsterdam">Amsterdam</span></td>
-								<td>FI501</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:26</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CPH" data-flight-id="482206" data-landeddeparted="True">
-								<td>15:10</td>
-								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
-								<td>FI205</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:27</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="LGW" data-flight-id="482207" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="LGW" data-flight-id="498567" data-landeddeparted="False">
 								<td>15:10</td>
 								<td><span class="cutoff" title="London Gatwick">London Gatwick</span></td>
 								<td>FI471</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:41</td>
+								<td>&#193;&#230;tlu&#240; koma 15:40</td>
 								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="HEL" data-flight-id="482208" data-landeddeparted="False">
-								<td>15:15</td>
-								<td><span class="cutoff" title="Helsinki">Helsinki</span></td>
-								<td>FI347</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>&#193;&#230;tlu&#240; koma 17:15</td>
-								<td>
-<a href="#" data-flight="2018/05/26 15:15 GMT+00:00|FI347" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 15:15 GMT+00:00|FI347" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI471" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI471" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -1800,81 +2216,151 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="BRU" data-flight-id="482209" data-landeddeparted="True">
-								<td>15:15</td>
-								<td><span class="cutoff" title="Brussels">Brussels</span></td>
-								<td>FI555</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="LHR" data-flight-id="498568" data-landeddeparted="False">
+								<td>15:10</td>
+								<td><span class="cutoff" title="London Heathrow">London Heathrow</span></td>
+								<td>FI451</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:27</td>
+								<td>&#193;&#230;tlu&#240; koma 15:27</td>
 								<td>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI451" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI451" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="HAM" data-flight-id="482210" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CPH" data-flight-id="498569" data-landeddeparted="False">
+								<td>15:10</td>
+								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
+								<td>FI205</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:26</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI205" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI205" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="AMS" data-flight-id="498570" data-landeddeparted="False">
+								<td>15:10</td>
+								<td><span class="cutoff" title="Amsterdam">Amsterdam</span></td>
+								<td>FI501</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:39</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI501" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:10 GMT+00:00|FI501" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="HAM" data-flight-id="498571" data-landeddeparted="False">
 								<td>15:15</td>
 								<td><span class="cutoff" title="Hamburg">Hamburg</span></td>
 								<td>FI511</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:20</td>
+								<td>&#193;&#230;tlu&#240; koma 15:43</td>
 								<td>
+<a href="#" data-flight="2018/06/22 15:15 GMT+00:00|FI511" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:15 GMT+00:00|FI511" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="OSL" data-flight-id="482211" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="AMS" data-flight-id="498572" data-landeddeparted="False">
+								<td>15:15</td>
+								<td><span class="cutoff" title="Amsterdam">Amsterdam</span></td>
+								<td>FI507</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:45</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:15 GMT+00:00|FI507" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:15 GMT+00:00|FI507" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="BRU" data-flight-id="498573" data-landeddeparted="False">
+								<td>15:15</td>
+								<td><span class="cutoff" title="Brussels">Brussels</span></td>
+								<td>FI555</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:42</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:15 GMT+00:00|FI555" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:15 GMT+00:00|FI555" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="OSL" data-flight-id="498574" data-landeddeparted="False">
 								<td>15:25</td>
 								<td><span class="cutoff" title="Oslo">Oslo</span></td>
 								<td>FI319</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:32</td>
+								<td>&#193;&#230;tlu&#240; koma 15:39</td>
 								<td>
+<a href="#" data-flight="2018/06/22 15:25 GMT+00:00|FI319" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:25 GMT+00:00|FI319" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="ARN" data-flight-id="482212" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="ARN" data-flight-id="498575" data-landeddeparted="False">
 								<td>15:30</td>
 								<td><span class="cutoff" title="Stockholm Arlanda">Stockholm Arlanda</span></td>
 								<td>FI307</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:43</td>
+								<td></td>
 								<td>
+<a href="#" data-flight="2018/06/22 15:30 GMT+00:00|FI307" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:30 GMT+00:00|FI307" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="FRA" data-flight-id="482213" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="FRA" data-flight-id="498577" data-landeddeparted="False">
 								<td>15:35</td>
 								<td><span class="cutoff" title="Frankfurt">Frankfurt</span></td>
 								<td>FI521</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:46</td>
+								<td>&#193;&#230;tlu&#240; koma 16:04</td>
 								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CPH" data-flight-id="482214" data-landeddeparted="True">
-								<td>15:40</td>
-								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
-								<td>FI207</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 16:05</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="TXL" data-flight-id="482215" data-landeddeparted="False">
-								<td>15:40</td>
-								<td><span class="cutoff" title="Berlin Tegel">Berlin Tegel</span></td>
-								<td>FI529</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Sta&#240;fest 16:17</td>
-								<td>
-<a href="#" data-flight="2018/05/26 15:40 GMT+00:00|FI529" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 15:40 GMT+00:00|FI529" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 15:35 GMT+00:00|FI521" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:35 GMT+00:00|FI521" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -1883,43 +2369,83 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CDG" data-flight-id="482216" data-landeddeparted="False">
-								<td>15:40</td>
-								<td><span class="cutoff" title="Paris CDG">Paris CDG</span></td>
-								<td>FI543</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Sta&#240;fest 17:33</td>
-								<td>
-<a href="#" data-flight="2018/05/26 15:40 GMT+00:00|FI543" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 15:40 GMT+00:00|FI543" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="ORY" data-flight-id="482217" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="ORY" data-flight-id="498578" data-landeddeparted="False">
 								<td>15:40</td>
 								<td><span class="cutoff" title="Paris Orly">Paris Orly</span></td>
 								<td>FI549</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 15:30</td>
+								<td>&#193;&#230;tlu&#240; koma 15:47</td>
 								<td>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI549" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI549" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CPH" data-flight-id="482219" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="TXL" data-flight-id="498579" data-landeddeparted="False">
+								<td>15:40</td>
+								<td><span class="cutoff" title="Berlin Tegel">Berlin Tegel</span></td>
+								<td>FI529</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:55</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI529" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI529" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CPH" data-flight-id="498580" data-landeddeparted="False">
+								<td>15:40</td>
+								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
+								<td>FI207</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 15:57</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI207" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI207" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CDG" data-flight-id="498581" data-landeddeparted="False">
+								<td>15:40</td>
+								<td><span class="cutoff" title="Paris CDG">Paris CDG</span></td>
+								<td>FI543</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 16:02</td>
+								<td>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI543" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:40 GMT+00:00|FI543" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="CPH" data-flight-id="498584" data-landeddeparted="False">
 								<td>15:45</td>
 								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
 								<td>FI209</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Sta&#240;fest 16:07</td>
+								<td>&#193;&#230;tlu&#240; koma 16:02</td>
 								<td>
-<a href="#" data-flight="2018/05/26 15:45 GMT+00:00|FI209" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 15:45 GMT+00:00|FI209" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 15:45 GMT+00:00|FI209" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:45 GMT+00:00|FI209" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -1928,32 +2454,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="GVA" data-flight-id="482220" data-landeddeparted="False">
-								<td>15:50</td>
-								<td><span class="cutoff" title="Geneva">Geneva</span></td>
-								<td>FI565</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Sta&#240;fest 16:10</td>
-								<td>
-<a href="#" data-flight="2018/05/26 15:50 GMT+00:00|FI565" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 15:50 GMT+00:00|FI565" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="ZRH" data-flight-id="482222" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="15" data-origindest="ZRH" data-flight-id="498585" data-landeddeparted="False">
 								<td>15:50</td>
 								<td><span class="cutoff" title="Zurich">Zurich</span></td>
 								<td>FI569</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Sta&#240;fest 16:08</td>
+								<td>&#193;&#230;tlu&#240; koma 16:15</td>
 								<td>
-<a href="#" data-flight="2018/05/26 15:50 GMT+00:00|FI569" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 15:50 GMT+00:00|FI569" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 15:50 GMT+00:00|FI569" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 15:50 GMT+00:00|FI569" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -1962,37 +2471,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="16" data-origindest="MUC" data-flight-id="482224" data-landeddeparted="True">
-								<td>16:00</td>
-								<td><span class="cutoff" title="Munich">Munich</span></td>
-								<td>FI533</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 16:08</td>
-								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="16" data-origindest="HEL" data-flight-id="482226" data-landeddeparted="True">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="16" data-origindest="HEL" data-flight-id="498586" data-landeddeparted="False">
 								<td>16:00</td>
 								<td><span class="cutoff" title="Helsinki">Helsinki</span></td>
 								<td>FI343</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>Lent 16:05</td>
+								<td>&#193;&#230;tlu&#240; koma 16:09</td>
 								<td>
-</td>
-								<td class="hidden-xs">
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="EZS" data-hour="16" data-origindest="GVA" data-flight-id="482228" data-landeddeparted="False">
-								<td>16:10</td>
-								<td><span class="cutoff" title="Geneva">Geneva</span></td>
-								<td>EZS1521</td>
-								<td class="hidden-sm"><span class="cutoff" title="EasyJet">EasyJet</span></td>
-								<td>Sta&#240;fest 16:30</td>
-								<td>
-<a href="#" data-flight="2018/05/26 16:10 GMT+00:00|EZS1521" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 16:10 GMT+00:00|EZS1521" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 16:00 GMT+00:00|FI343" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 16:00 GMT+00:00|FI343" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2001,15 +2488,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="EZS" data-hour="16" data-origindest="BSL" data-flight-id="482229" data-landeddeparted="False">
-								<td>16:30</td>
-								<td><span class="cutoff" title="Basel Mulhouse">Basel Mulhouse</span></td>
-								<td>EZS1245</td>
-								<td class="hidden-sm"><span class="cutoff" title="EasyJet">EasyJet</span></td>
-								<td>Sta&#240;fest 16:23</td>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="16" data-origindest="MUC" data-flight-id="498588" data-landeddeparted="False">
+								<td>16:00</td>
+								<td><span class="cutoff" title="Munich">Munich</span></td>
+								<td>FI533</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td>&#193;&#230;tlu&#240; koma 16:27</td>
 								<td>
-<a href="#" data-flight="2018/05/26 16:30 GMT+00:00|EZS1245" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 16:30 GMT+00:00|EZS1245" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 16:00 GMT+00:00|FI533" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 16:00 GMT+00:00|FI533" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2018,15 +2505,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="BA" data-hour="17" data-origindest="LHR" data-flight-id="482230" data-landeddeparted="False">
-								<td>17:20</td>
-								<td><span class="cutoff" title="London Heathrow">London Heathrow</span></td>
-								<td>BA800</td>
-								<td class="hidden-sm"><span class="cutoff" title="British Airways">British Airways</span></td>
-								<td>Sta&#240;fest 16:51</td>
+							<tr class="schedule-items-entry" data-airline="WK" data-hour="16" data-origindest="ZRH" data-flight-id="498591" data-landeddeparted="False">
+								<td>16:15</td>
+								<td><span class="cutoff" title="Zurich">Zurich</span></td>
+								<td>WK1302</td>
+								<td class="hidden-sm"><span class="cutoff" title="Edelweiss">Edelweiss</span></td>
+								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 17:20 GMT+00:00|BA800" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 17:20 GMT+00:00|BA800" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 16:15 GMT+00:00|WK1302" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 16:15 GMT+00:00|WK1302" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2035,66 +2522,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="AY" data-hour="17" data-origindest="HEL" data-flight-id="482231" data-landeddeparted="False">
-								<td>17:20</td>
-								<td><span class="cutoff" title="Helsinki">Helsinki</span></td>
-								<td>AY993</td>
-								<td class="hidden-sm"><span class="cutoff" title="Finnair">Finnair</span></td>
-								<td>Sta&#240;fest 16:56</td>
-								<td>
-<a href="#" data-flight="2018/05/26 17:20 GMT+00:00|AY993" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 17:20 GMT+00:00|AY993" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="SK" data-hour="17" data-origindest="OSL" data-flight-id="482232" data-landeddeparted="False">
-								<td>17:55</td>
-								<td><span class="cutoff" title="Oslo">Oslo</span></td>
-								<td>SK4785</td>
-								<td class="hidden-sm"><span class="cutoff" title="SAS">SAS</span></td>
-								<td>Sta&#240;fest 18:11</td>
-								<td>
-<a href="#" data-flight="2018/05/26 17:55 GMT+00:00|SK4785" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 17:55 GMT+00:00|SK4785" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="W6" data-hour="18" data-origindest="GDN" data-flight-id="482233" data-landeddeparted="False">
-								<td>18:10</td>
-								<td><span class="cutoff" title="Gdansk">Gdansk</span></td>
-								<td>W61773</td>
-								<td class="hidden-sm"><span class="cutoff" title="Wizz Air">Wizz Air</span></td>
-								<td>Sta&#240;fest 17:50</td>
-								<td>
-<a href="#" data-flight="2018/05/26 18:10 GMT+00:00|W61773" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 18:10 GMT+00:00|W61773" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="D8" data-hour="18" data-origindest="BCN" data-flight-id="482234" data-landeddeparted="False">
-								<td>18:45</td>
-								<td><span class="cutoff" title="Barcelona">Barcelona</span></td>
-								<td>D85666</td>
+							<tr class="schedule-items-entry" data-airline="DY" data-hour="16" data-origindest="ARN" data-flight-id="498592" data-landeddeparted="False">
+								<td>16:55</td>
+								<td><span class="cutoff" title="Stockholm Arlanda">Stockholm Arlanda</span></td>
+								<td>DY4533</td>
 								<td class="hidden-sm"><span class="cutoff" title="Norwegian">Norwegian</span></td>
-								<td>Sta&#240;fest 18:36</td>
+								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 18:45 GMT+00:00|D85666" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 18:45 GMT+00:00|D85666" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 16:55 GMT+00:00|DY4533" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 16:55 GMT+00:00|DY4533" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2103,15 +2539,100 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="19" data-origindest="CPH" data-flight-id="482235" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="SK" data-hour="17" data-origindest="OSL" data-flight-id="498593" data-landeddeparted="False">
+								<td>17:00</td>
+								<td><span class="cutoff" title="Oslo">Oslo</span></td>
+								<td>SK4787</td>
+								<td class="hidden-sm"><span class="cutoff" title="SAS">SAS</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 17:00 GMT+00:00|SK4787" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 17:00 GMT+00:00|SK4787" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="W6" data-hour="18" data-origindest="WRO" data-flight-id="498594" data-landeddeparted="False">
+								<td>18:05</td>
+								<td><span class="cutoff" title="Wroclaw">Wroclaw</span></td>
+								<td>W61897</td>
+								<td class="hidden-sm"><span class="cutoff" title="Wizz Air">Wizz Air</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 18:05 GMT+00:00|W61897" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 18:05 GMT+00:00|W61897" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="6F" data-hour="19" data-origindest="AGP" data-flight-id="498595" data-landeddeparted="False">
+								<td>19:00</td>
+								<td><span class="cutoff" title="Malaga">Malaga</span></td>
+								<td>6F112</td>
+								<td class="hidden-sm"><span class="cutoff" title="Primera Air">Primera Air</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 19:00 GMT+00:00|6F112" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 19:00 GMT+00:00|6F112" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="D8" data-hour="19" data-origindest="ALC" data-flight-id="498596" data-landeddeparted="False">
+								<td>19:05</td>
+								<td><span class="cutoff" title="Alicante">Alicante</span></td>
+								<td>D85390</td>
+								<td class="hidden-sm"><span class="cutoff" title="Norwegian">Norwegian</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 19:05 GMT+00:00|D85390" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 19:05 GMT+00:00|D85390" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="W6" data-hour="19" data-origindest="VNO" data-flight-id="498597" data-landeddeparted="False">
+								<td>19:25</td>
+								<td><span class="cutoff" title="Vilnius">Vilnius</span></td>
+								<td>W68089</td>
+								<td class="hidden-sm"><span class="cutoff" title="Wizz Air">Wizz Air</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 19:25 GMT+00:00|W68089" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 19:25 GMT+00:00|W68089" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="19" data-origindest="CPH" data-flight-id="498598" data-landeddeparted="False">
 								<td>19:30</td>
 								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
 								<td>WW905</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
 								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 19:30 GMT+00:00|WW905" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 19:30 GMT+00:00|WW905" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 19:30 GMT+00:00|WW905" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 19:30 GMT+00:00|WW905" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2120,32 +2641,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="19" data-origindest="STN" data-flight-id="482236" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="19" data-origindest="STN" data-flight-id="498599" data-landeddeparted="False">
 								<td>19:30</td>
 								<td><span class="cutoff" title="London Stansted">London Stansted</span></td>
 								<td>WW827</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 18:55</td>
-								<td>
-<a href="#" data-flight="2018/05/26 19:30 GMT+00:00|WW827" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 19:30 GMT+00:00|WW827" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="GL" data-hour="19" data-origindest="GOH" data-flight-id="482237" data-landeddeparted="False">
-								<td>19:30</td>
-								<td><span class="cutoff" title="Nuuk">Nuuk</span></td>
-								<td>GL710</td>
-								<td class="hidden-sm"><span class="cutoff" title="Air Greenland">Air Greenland</span></td>
 								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 19:30 GMT+00:00|GL710" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 19:30 GMT+00:00|GL710" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 19:30 GMT+00:00|WW827" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 19:30 GMT+00:00|WW827" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2154,15 +2658,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="20" data-origindest="CDG" data-flight-id="482238" data-landeddeparted="False">
-								<td>20:00</td>
-								<td><span class="cutoff" title="Paris CDG">Paris CDG</span></td>
-								<td>WW407</td>
-								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 19:29</td>
+							<tr class="schedule-items-entry" data-airline="W6" data-hour="19" data-origindest="POZ" data-flight-id="498600" data-landeddeparted="False">
+								<td>19:45</td>
+								<td><span class="cutoff" title="Poznan">Poznan</span></td>
+								<td>W61997</td>
+								<td class="hidden-sm"><span class="cutoff" title="Wizz Air">Wizz Air</span></td>
+								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 20:00 GMT+00:00|WW407" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 20:00 GMT+00:00|WW407" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 19:45 GMT+00:00|W61997" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 19:45 GMT+00:00|W61997" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2171,15 +2675,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="20" data-origindest="AMS" data-flight-id="482239" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="20" data-origindest="AMS" data-flight-id="498601" data-landeddeparted="False">
 								<td>20:00</td>
 								<td><span class="cutoff" title="Amsterdam">Amsterdam</span></td>
 								<td>WW447</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 19:19</td>
+								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 20:00 GMT+00:00|WW447" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 20:00 GMT+00:00|WW447" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 20:00 GMT+00:00|WW447" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 20:00 GMT+00:00|WW447" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2188,15 +2692,49 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="20" data-origindest="SXF" data-flight-id="482240" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="20" data-origindest="CDG" data-flight-id="498602" data-landeddeparted="False">
+								<td>20:00</td>
+								<td><span class="cutoff" title="Paris CDG">Paris CDG</span></td>
+								<td>WW407</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 20:00 GMT+00:00|WW407" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 20:00 GMT+00:00|WW407" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="20" data-origindest="CDG" data-flight-id="498603" data-landeddeparted="False">
+								<td>20:05</td>
+								<td><span class="cutoff" title="Paris CDG">Paris CDG</span></td>
+								<td>WW411</td>
+								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 20:05 GMT+00:00|WW411" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 20:05 GMT+00:00|WW411" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="20" data-origindest="SXF" data-flight-id="498604" data-landeddeparted="False">
 								<td>20:15</td>
 								<td><span class="cutoff" title="Berlin Schoenefeld">Berlin Schoenefeld</span></td>
 								<td>WW723</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 19:58</td>
+								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 20:15 GMT+00:00|WW723" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 20:15 GMT+00:00|WW723" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 20:15 GMT+00:00|WW723" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 20:15 GMT+00:00|WW723" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2205,49 +2743,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="21" data-origindest="TFS" data-flight-id="482241" data-landeddeparted="False">
-								<td>21:25</td>
-								<td><span class="cutoff" title="Tenerife">Tenerife</span></td>
-								<td>WW635</td>
-								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
-								<td>&#193;&#230;tlu&#240; koma 22:01</td>
-								<td>
-<a href="#" data-flight="2018/05/26 21:25 GMT+00:00|WW635" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 21:25 GMT+00:00|WW635" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="22" data-origindest="MXP" data-flight-id="482242" data-landeddeparted="False">
-								<td>22:55</td>
-								<td><span class="cutoff" title="Milan Malpensa">Milan Malpensa</span></td>
-								<td>FI593</td>
-								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>&#193;&#230;tlu&#240; koma 00:00</td>
-								<td>
-<a href="#" data-flight="2018/05/26 22:55 GMT+00:00|FI593" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 22:55 GMT+00:00|FI593" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
-</td>
-								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
-								</td>
-							</tr>
-							<tr class="schedule-items-entry" data-airline="WW" data-hour="23" data-origindest="LGW" data-flight-id="482243" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="WW" data-hour="23" data-origindest="LGW" data-flight-id="498605" data-landeddeparted="False">
 								<td>23:00</td>
 								<td><span class="cutoff" title="London Gatwick">London Gatwick</span></td>
 								<td>WW815</td>
 								<td class="hidden-sm"><span class="cutoff" title="WOW air">WOW air</span></td>
 								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 23:00 GMT+00:00|WW815" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 23:00 GMT+00:00|WW815" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 23:00 GMT+00:00|WW815" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 23:00 GMT+00:00|WW815" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2256,15 +2760,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="23" data-origindest="LHR" data-flight-id="482244" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="23" data-origindest="LHR" data-flight-id="498607" data-landeddeparted="False">
 								<td>23:10</td>
 								<td><span class="cutoff" title="London Heathrow">London Heathrow</span></td>
 								<td>FI455</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
-								<td>&#193;&#230;tlu&#240; koma 23:09</td>
+								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 23:10 GMT+00:00|FI455" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 23:10 GMT+00:00|FI455" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 23:10 GMT+00:00|FI455" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 23:10 GMT+00:00|FI455" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2273,15 +2777,83 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="23" data-origindest="CPH" data-flight-id="482245" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="LH" data-hour="23" data-origindest="FRA" data-flight-id="498608" data-landeddeparted="False">
+								<td>23:30</td>
+								<td><span class="cutoff" title="Frankfurt">Frankfurt</span></td>
+								<td>LH868</td>
+								<td class="hidden-sm"><span class="cutoff" title="Lufthansa">Lufthansa</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 23:30 GMT+00:00|LH868" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 23:30 GMT+00:00|LH868" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="OS" data-hour="23" data-origindest="VIE" data-flight-id="498609" data-landeddeparted="False">
+								<td>23:40</td>
+								<td><span class="cutoff" title="Vienna">Vienna</span></td>
+								<td>OS9761</td>
+								<td class="hidden-sm"><span class="cutoff" title="Austrian">Austrian</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 23:40 GMT+00:00|OS9761" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 23:40 GMT+00:00|OS9761" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="23" data-origindest="CPH" data-flight-id="498610" data-landeddeparted="False">
 								<td>23:40</td>
 								<td><span class="cutoff" title="Copenhagen">Copenhagen</span></td>
 								<td>FI217</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
 								<td></td>
 								<td>
-<a href="#" data-flight="2018/05/26 23:40 GMT+00:00|FI217" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/05/26 23:40 GMT+00:00|FI217" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" data-flight="2018/06/22 23:40 GMT+00:00|FI217" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 23:40 GMT+00:00|FI217" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="W6" data-hour="23" data-origindest="WAW" data-flight-id="498611" data-landeddeparted="False">
+								<td>23:50</td>
+								<td><span class="cutoff" title="Warsaw">Warsaw</span></td>
+								<td>W61539</td>
+								<td class="hidden-sm"><span class="cutoff" title="Wizz Air">Wizz Air</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 23:50 GMT+00:00|W61539" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 23:50 GMT+00:00|W61539" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
+<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
+<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
+</td>
+								<td class="hidden-xs">
+									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
+									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
+								</td>
+							</tr>
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="23" data-origindest="ALC" data-flight-id="498612" data-landeddeparted="False">
+								<td>23:50</td>
+								<td><span class="cutoff" title="Alicante">Alicante</span></td>
+								<td>FI1583</td>
+								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
+								<td></td>
+								<td>
+<a href="#" data-flight="2018/06/22 23:50 GMT+00:00|FI1583" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
+<a href="#" data-flight="2018/06/22 23:50 GMT+00:00|FI1583" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
 <a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
 <a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
@@ -2413,6 +2985,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 									<li><a href="/fyrirtaekid/vidskiptavinir/keflavikurflugvollur/adgangur-og-oryggi/adgangsheimildir/umsoknir-fyrir-fyrirtaeki-og-einstaklinga">Eyðublöð</a></li>
 									<li><a href="/fyrirtaekid/um-isavia/fyrirtaekid/dotturfyrirtaeki">Dótturfélög</a></li>
 									<li><a href="/fyrirtaekid/um-isavia/fyrirtaekid/hafdu-samband">Hafa samband</a></li>
+									<li><a href="/fyrirtaekid/um-isavia/fyrirtaekid/stefna-isavia/medferd-personuupplysinga-hja-isavia">Meðferð persónuupplýsinga</a></li>
 								</ul>
 							</div>
 						</div>
@@ -2444,7 +3017,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 		</div>
 	</section>
 </footer>
-<script src="/static/js/app.min.js?121"></script>
+<script src="/static/js/app.min.js?127"></script>
 <!-- Hotjar Tracking Code for https://www.isavia.is/ -->
 <script>
 (function(h,o,t,j,a,r){
