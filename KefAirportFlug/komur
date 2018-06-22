@@ -1492,21 +1492,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="JFK" data-flight-id="498515" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="JFK" data-flight-id="498515" data-landeddeparted="True">
 								<td>06:20</td>
 								<td><span class="cutoff" title="New York JFK">New York JFK</span></td>
 								<td>FI616</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
 								<td>Lent 07:17</td>
 								<td>
-<a href="#" data-flight="2018/06/22 06:20 GMT+00:00|FI616" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/06/22 06:20 GMT+00:00|FI616" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
 							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="YYZ" data-flight-id="498516" data-landeddeparted="True">
@@ -1520,21 +1514,15 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td class="hidden-xs">
 								</td>
 							</tr>
-							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="MSP" data-flight-id="498517" data-landeddeparted="False">
+							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="MSP" data-flight-id="498517" data-landeddeparted="True">
 								<td>06:30</td>
 								<td><span class="cutoff" title="Minneapolis St Paul">Minneapolis St Paul</span></td>
 								<td>FI656</td>
 								<td class="hidden-sm"><span class="cutoff" title="Icelandair">Icelandair</span></td>
 								<td>Lent 07:15</td>
 								<td>
-<a href="#" data-flight="2018/06/22 06:30 GMT+00:00|FI656" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
-<a href="#" data-flight="2018/06/22 06:30 GMT+00:00|FI656" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>
-<a href="#" class="email-notifications" aria-label="Tilkynningar í tölvupósti"><i class="icon icon-mail"></i></a>
-<a href="#" class="pin-flight" aria-label="Vakta"><i class="icon icon-pin hidden-sm hidden-md hidden-lg"></i></a>
 </td>
 								<td class="hidden-xs">
-									<a href="#" class="btn btn-rounded btn-blue btn-sm hidden-sm hidden-md pin-flight"><i class="icon icon-planeup"></i> Vakta</a>
-									<a href="#" class="visible-sm visible-md pin-flight" aria-label="Vakta"><i class="icon icon-pin"></i></a>
 								</td>
 							</tr>
 							<tr class="schedule-items-entry" data-airline="FI" data-hour="6" data-origindest="BOS" data-flight-id="498518" data-landeddeparted="True">
@@ -1586,7 +1574,7 @@ komur til Keflavíkurflugvallar <span class="hidden-sm hidden-md hidden-xs">í d
 								<td><span class="cutoff" title="New York Newark">New York Newark</span></td>
 								<td>UA138</td>
 								<td class="hidden-sm"><span class="cutoff" title="United Airlines">United Airlines</span></td>
-								<td>Sta&#240;fest 08:10</td>
+								<td>Lent 08:12</td>
 								<td>
 <a href="#" data-flight="2018/06/22 08:10 GMT+00:00|UA138" class="bt-messenger" aria-label="Tilkynningar í Facebook Messenger"><i class="icon icon-messenger"></i></a>
 <a href="#" data-flight="2018/06/22 08:10 GMT+00:00|UA138" class="bt-twitter" aria-label="Tilkynningar á Twitter"><i class="icon icon-twitter"></i></a>

@@ -1,6 +1,6 @@
 @ECHO OFF
 
-start gvim -n -M out.fly -c "map <F5> :e %<CR> | set autoread | set noswapfile"
+start gvim -n -M out.fly -c "map <F5> :e %<CR> | set autoread | set noswapfile | set lines=9999 columns=9999"
 
 :loop
 echo %date:~5% -%time:~0,-3% - Updating flights (Pressing a key in this window forces a refresh)
