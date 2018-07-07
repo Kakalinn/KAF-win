@@ -71,11 +71,17 @@ int flightcomp(const void* a, const void* b)
 
 int main(int argc, char** argv)
 {
+	if (argc == 1)
+	{
+		printf("No input\n");
+		return 4;
+	}
+
 	int i, j, o;
 	char c;
 	flight l[1024];
 
-	FILE* fp = fopen("komur", "r");
+	FILE* fp = fopen(argv[1], "r");
 
 	char line[1024];
 
