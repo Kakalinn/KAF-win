@@ -31,7 +31,7 @@ int flightcomp(const void* a, const void* b)
 
 	switch (r->state)
 	{
-		case 0:
+		case 'z':
 		case 'x':
 		case 'u':
 			strcpy(p, r->time);
@@ -43,13 +43,17 @@ int flightcomp(const void* a, const void* b)
 			{
 				p[0] = '.';
 			}
+			else if (r->time[0] == '2' && r->stime[0] == '0')
+			{
+				p[0] = '~';
+			}
 
 			break;
 	}
 	
 	switch (s->state)
 	{
-		case 0:
+		case 'z':
 		case 'x':
 		case 'u':
 			strcpy(q, s->time);
@@ -60,6 +64,10 @@ int flightcomp(const void* a, const void* b)
 			if (s->time[0] == '0' && s->time[1] < '8' && s->stime[0] == '2')
 			{
 				q[0] = '.';
+			}
+			else if (s->time[0] == '2' && s->stime[0] == '0')
+			{
+				q[0] = '~';
 			}
 
 			break;
@@ -219,60 +227,71 @@ int main(int argc, char** argv)
 				for (i = i + 1; line[i] != '>'; i++);
 				i++;
 
-				for (o = i; line[i] != '<'; i++)
+				if (line[i] != '<')
 				{
-					l[flightc].airline[i - o] = line[i];
+					for (o = i; line[i] != '<'; i++)
+					{
+						l[flightc].airline[i - o] = line[i];
+					}
+
+					l[flightc].airline[i - o] = '\0';
 				}
-				l[flightc].airline[i - o] = '\0';
+				else
+				{
+					l[flightc].airline[0] = 'b';
+					l[flightc].airline[1] = 'b';
+					l[flightc].airline[2] = 'b';
+					l[flightc].airline[3] = '\0';
+				}
 
 				itemc = 4;
 			}
 
 			else if(itemc == 4)
 			{
-				if (line[4] == '<')
+				if (line[37] == '\0')
 				{
-					l[flightc].state = 0;
+					l[flightc].state = 'z';
 				}
 
-				else if (line[4] == '&')
+				else if (line[32] == '&')
 				{
 					l[flightc].state = 'e';
 
-					l[flightc].stime[0] = line[31];
-					l[flightc].stime[1] = line[32];
-					l[flightc].stime[2] = line[33];
-					l[flightc].stime[3] = line[34];
-					l[flightc].stime[4] = line[35];
+					l[flightc].stime[0] = line[59];
+					l[flightc].stime[1] = line[60];
+					l[flightc].stime[2] = line[61];
+					l[flightc].stime[3] = line[62];
+					l[flightc].stime[4] = line[63];
 					l[flightc].stime[5] = '\0';
 				}
 
-				else if (line[4] == 'A')
+				else if (line[32] == 'A')
 				{
 					l[flightc].state = 'x';
 				}
 
-				else if (line[4] == 'S')
+				else if (line[32] == 'S')
 				{
 					l[flightc].state = 'c';
 
-					l[flightc].stime[0] = line[18];
-					l[flightc].stime[1] = line[19];
-					l[flightc].stime[2] = line[20];
-					l[flightc].stime[3] = line[21];
-					l[flightc].stime[4] = line[22];
+					l[flightc].stime[0] = line[46];
+					l[flightc].stime[1] = line[47];
+					l[flightc].stime[2] = line[48];
+					l[flightc].stime[3] = line[49];
+					l[flightc].stime[4] = line[50];
 					l[flightc].stime[5] = '\0';
 				}
 
-				else if (line[4] == 'L')
+				else if (line[32] == 'L')
 				{
 					l[flightc].state = 'l';
 
-					l[flightc].stime[0] = line[9];
-					l[flightc].stime[1] = line[10];
-					l[flightc].stime[2] = line[11];
-					l[flightc].stime[3] = line[12];
-					l[flightc].stime[4] = line[13];
+					l[flightc].stime[0] = line[37];
+					l[flightc].stime[1] = line[38];
+					l[flightc].stime[2] = line[39];
+					l[flightc].stime[3] = line[40];
+					l[flightc].stime[4] = line[41];
 					l[flightc].stime[5] = '\0';
 				}
 
@@ -368,8 +387,12 @@ int main(int argc, char** argv)
 			case 'u':
 				printf("Unknown state. This is a bug..\n");
 				break;
-			case 0:
+			case 'z':
 				printf("\n");
+				break;
+			defult:
+				printf("Error!\n");
+				break;
 		}
 
 		for (j = 0; j < 128; j++)
