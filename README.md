@@ -29,7 +29,7 @@ happen, roughly, every thirty seconds but can also be forced by pressing any but
 
 # Linux
 The process that is undergone when running __KAF__ is fairly linear and porting it to __Linux__ should not prove
-to difficult. I may do this at some point, though I am making no promises.
+too difficult. I may do this at some point, though I am making no promises.
 
 # Important notice
 The effectiveness of this project is dependent on the syntax of a single webpage. I have no say over the design
