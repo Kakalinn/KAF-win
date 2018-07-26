@@ -1,5 +1,6 @@
-del komur
-wget "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur"
-echo %date:~5% - %time:~0,-3% > out.fly
-kvl >> out.fly
+del komur*
 
+wget "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur"
+
+powershell "(Get-Date).ToString('yyyy-MM-dd HH:mm:ss')" > out.fly
+kvl komur >> out.fly

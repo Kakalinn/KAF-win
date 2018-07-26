@@ -203,6 +203,15 @@ int main(int argc, char** argv)
 				for (o = i; line[i] != '<'; i++)
 				{
 					l[flightc].origin[i - o] = line[i];
+					if (line[i] == '&')
+					{
+						l[flightc].origin[i - o] = '#';
+						while (line[i] != ';')
+						{
+							i++;
+							o++;
+						}
+					}
 				}
 				l[flightc].origin[i - o] = '\0';
 
@@ -232,6 +241,15 @@ int main(int argc, char** argv)
 					for (o = i; line[i] != '<'; i++)
 					{
 						l[flightc].airline[i - o] = line[i];
+						if (line[i] == '&')
+						{
+							l[flightc].airline[i - o] = '#';
+							while (line[i] != ';')
+							{
+								i++;
+								o++;
+							}
+						}
 					}
 
 					l[flightc].airline[i - o] = '\0';
@@ -390,7 +408,7 @@ int main(int argc, char** argv)
 			case 'z':
 				printf("\n");
 				break;
-			defult:
+defult:
 				printf("Error!\n");
 				break;
 		}
