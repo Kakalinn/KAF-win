@@ -1,5 +1,4 @@
 .gitignore
 kvl.exe
-KAF.lnk
-oldKAF.lnk
+*.lnk
 test\*
