@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv)
 {
-	char c;
+	int c;
 	int i, j, x, y, size, cur;
 	char last_rfr[20];
 	last_rfr[19] = '\0';
@@ -14,6 +14,7 @@ int main(int argc, char** argv)
 	WINDOW* win = initscr();
 	curs_set(0);
 	scrollok(win, 1);
+	keypad(win, 1);
 	noecho();
 	start_color();
 	init_pair(1, COLOR_WHITE,  COLOR_BLACK);
@@ -188,12 +189,14 @@ int main(int argc, char** argv)
 				break;
 			case 'J':
 				cur += 4;
+			case KEY_DOWN:
 			case 'j':
 				cur += 2;
 
 				break;
 			case 'K':
 				cur -= 4;
+			case KEY_UP:
 			case 'k':
 				cur -= 2;
 
