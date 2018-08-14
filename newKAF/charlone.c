@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv)
 {
-	char c;
+	int c;
 	int i, j, x, y, size[2], cur;
 	int window_view = 0; /* 0 = komur, 1 = brottfarir */
 	char last_rfr[20];
@@ -15,6 +15,7 @@ int main(int argc, char** argv)
 	WINDOW* win = initscr();
 	curs_set(0);
 	scrollok(win, 1);
+	keypad(win, 1);
 	noecho();
 	start_color();
 	init_pair(1, COLOR_WHITE,  COLOR_BLACK);
@@ -239,14 +240,18 @@ int main(int argc, char** argv)
 			case 'h':
 				cur += y/2*2 - 2;
 				break;
+			case KEY_RIGHT:
 			case 'J':
 				cur += 4;
+			case KEY_DOWN:
 			case 'j':
 				cur += 2;
 
 				break;
+			case KEY_LEFT:
 			case 'K':
 				cur -= 4;
+			case KEY_UP:
 			case 'k':
 				cur -= 2;
 
