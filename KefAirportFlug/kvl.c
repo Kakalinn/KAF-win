@@ -13,8 +13,16 @@ typedef struct
 	   0   = ekkert
 	   'x' = aflyst
 	   'c' = stadfest
-	   'e' = aaetlud
+	   'e' = aaetlud koma
 	   'l' = lent
+
+	   'f' = farin
+	   'a' = aaetlud brottfor
+	   'g' = hlidi lokad
+	   'd' = hlid opid
+	   's' = lokautkall
+	   't' = fara ad hlidi
+
 	   'u' = oksilgreint
     */
 	char state;
@@ -34,6 +42,10 @@ int flightcomp(const void* a, const void* b)
 		case 'z':
 		case 'x':
 		case 'u':
+		case 'g':
+		case 't':
+		case 's':
+		case 'd':
 			strcpy(p, r->time);
 			break;
 		default:
@@ -56,6 +68,10 @@ int flightcomp(const void* a, const void* b)
 		case 'z':
 		case 'x':
 		case 'u':
+		case 'g':
+		case 't':
+		case 's':
+		case 'd':
 			strcpy(q, s->time);
 			break;
 		default:
@@ -274,14 +290,32 @@ int main(int argc, char** argv)
 
 				else if (line[32] == '&')
 				{
-					l[flightc].state = 'e';
+					if (line[54] == 'k')
+					{
+						l[flightc].state = 'e';
 
-					l[flightc].stime[0] = line[59];
-					l[flightc].stime[1] = line[60];
-					l[flightc].stime[2] = line[61];
-					l[flightc].stime[3] = line[62];
-					l[flightc].stime[4] = line[63];
-					l[flightc].stime[5] = '\0';
+						l[flightc].stime[0] = line[59];
+						l[flightc].stime[1] = line[60];
+						l[flightc].stime[2] = line[61];
+						l[flightc].stime[3] = line[62];
+						l[flightc].stime[4] = line[63];
+						l[flightc].stime[5] = '\0';
+					}
+					else if (line[54] == 'b')
+					{
+						l[flightc].state = 'a';
+
+						l[flightc].stime[0] = line[68];
+						l[flightc].stime[1] = line[69];
+						l[flightc].stime[2] = line[70];
+						l[flightc].stime[3] = line[71];
+						l[flightc].stime[4] = line[72];
+						l[flightc].stime[5] = '\0';
+					}
+					else
+					{
+						l[flightc].state = 'u';
+					}
 				}
 
 				else if (line[32] == 'A')
@@ -303,14 +337,64 @@ int main(int argc, char** argv)
 
 				else if (line[32] == 'L')
 				{
-					l[flightc].state = 'l';
+					if (line[33] == 'e')
+					{
+						l[flightc].state = 'l';
 
-					l[flightc].stime[0] = line[37];
-					l[flightc].stime[1] = line[38];
-					l[flightc].stime[2] = line[39];
-					l[flightc].stime[3] = line[40];
-					l[flightc].stime[4] = line[41];
-					l[flightc].stime[5] = '\0';
+						l[flightc].stime[0] = line[37];
+						l[flightc].stime[1] = line[38];
+						l[flightc].stime[2] = line[39];
+						l[flightc].stime[3] = line[40];
+						l[flightc].stime[4] = line[41];
+						l[flightc].stime[5] = '\0';
+					}
+					else if (line[33] == 'o')
+					{
+						l[flightc].state = 's';
+					}
+					else
+					{
+						l[flightc].state = 'u';
+					}
+				}
+
+				else if (line[32] == 'H')
+				{
+					if (line[41] == ' ')
+					{
+						l[flightc].state = 'd';
+					}
+					else if (line[41] == 'i')
+					{
+						l[flightc].state = 'g';
+					}
+					else
+					{
+						l[flightc].state = 'u';
+					}
+				}
+
+				else if (line[32] == 'F')
+				{
+					if (line[35] == 'i')
+					{
+						l[flightc].state = 'f';
+
+						l[flightc].stime[0] = line[38];
+						l[flightc].stime[1] = line[39];
+						l[flightc].stime[2] = line[40];
+						l[flightc].stime[3] = line[41];
+						l[flightc].stime[4] = line[42];
+						l[flightc].stime[5] = '\0';
+					}
+					else if (line[35] == 'a')
+					{
+						l[flightc].state = 't';
+					}
+					else
+					{
+						l[flightc].state = 'u';
+					}
 				}
 
 				else
@@ -402,13 +486,31 @@ int main(int argc, char** argv)
 			case 'e':
 				printf("Expected  %s\n", l[i].stime);
 				break;
+			case 'f':
+				printf("Departed  %s\n", l[i].stime);
+				break;
+			case 'a':
+				printf("Expected  %s\n", l[i].stime);
+				break;
+			case 'g':
+				printf("Gate closed\n");
+				break;
+			case 't':
+				printf("Go to gate\n");
+				break;
+			case 'd':
+				printf("Gate open\n");
+				break;
+			case 's':
+				printf("Final call\n");
+				break;
 			case 'u':
 				printf("Unknown state. This is a bug..\n");
 				break;
 			case 'z':
 				printf("\n");
 				break;
-defult:
+			default:
 				printf("Error!\n");
 				break;
 		}
