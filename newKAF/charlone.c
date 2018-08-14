@@ -232,7 +232,7 @@ int main(int argc, char** argv)
 
 	if (window_view == 0)
 	{
-		attron(COLOR_PAIR(2));
+		attron(COLOR_PAIR(3));
 		mvprintw(y - 1, 8, "Arrivals");
 	}
 	else if (window_view == 1)
@@ -334,7 +334,7 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "  ...q twice to close window.                                  ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...Q to close the window.                                    ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...g to show the planes that are about to land.              ");
-				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...u to change between arrivals and departures.              ");
+				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...u to change between          and                          ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
@@ -351,6 +351,8 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(1)); mvprintw(i,   j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, " Last refresh: %s", last_rfr);
 
+				attron(COLOR_PAIR(3)); mvprintw(20, 30, "Arrivals");
+				attron(COLOR_PAIR(5)); mvprintw(20, 43, "Departures");
 
 
 
@@ -615,7 +617,7 @@ int main(int argc, char** argv)
 
 		if (window_view == 0)
 		{
-			attron(COLOR_PAIR(2));
+			attron(COLOR_PAIR(3));
 			mvprintw(y - 1, 8, "Arrivals");
 		}
 		else if (window_view == 1)
