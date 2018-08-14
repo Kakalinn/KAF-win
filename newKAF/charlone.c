@@ -472,6 +472,14 @@ int main(int argc, char** argv)
 				c = 'q';
 				break;
 			case 'q':
+				attron(COLOR_PAIR(7));
+				mvprintw(y/3 - 2, x/4, "                      ");
+				mvprintw(y/3 - 1, x/4, "  You are about quit  ");
+				mvprintw(y/3,     x/4, "  this program.       ");
+				mvprintw(y/3 + 1, x/4, "  Press q again if    ");
+				mvprintw(y/3 + 2, x/4, "  you are sure.       ");
+				mvprintw(y/3 + 3, x/4, "                      ");
+				refresh();
 				c = getch();
 				break;
 			case 'g':
