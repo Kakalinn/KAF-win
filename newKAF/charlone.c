@@ -225,6 +225,50 @@ int main(int argc, char** argv)
 			mvaddch(i, 5, file[window_view][i][5]);
 		}
 	}
+	attron(COLOR_PAIR(7));
+	mvprintw(y - 2, 0, "------'-------------------------------------------------------------------------------------------------------------------------");
+	attron(COLOR_PAIR(1));
+	mvprintw(y - 1, 0, "                                                                                                                                ");
+
+	if (window_view == 0)
+	{
+		attron(COLOR_PAIR(2));
+		mvprintw(y - 1, 8, "Arrivals");
+	}
+	else if (window_view == 1)
+	{
+		attron(COLOR_PAIR(5));
+		mvprintw(y - 1, 8, "Departures");
+	}
+
+	attron(COLOR_PAIR(1));
+	mvprintw(y - 1, 40, "Last update:");
+	attron(COLOR_PAIR(4));
+	printw(" %s", last_rfr);
+
+	int percentage = (int)(100.0*cur/(size[window_view] - y) + 0.5);
+
+	percentage == 0;
+	if (percentage == 0)
+	{
+		attron(COLOR_PAIR(1));
+		mvprintw(y - 1, 98, "TOP");
+	}
+	else if (percentage >= 100)
+	{
+		attron(COLOR_PAIR(1));
+		mvprintw(y - 1, 98, "BOT");
+	}
+	else if (percentage < 10)
+	{
+		attron(COLOR_PAIR(1));
+		mvprintw(y - 1, 98, " %d%c", percentage, '%');
+	}
+	else
+	{
+		attron(COLOR_PAIR(1));
+		mvprintw(y - 1, 98, "%d%c", percentage, '%');
+	}
 	refresh();
 
 
@@ -260,7 +304,7 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(7));
 				i = 1;
 				j = 3;
-				
+
 				attron(COLOR_PAIR(7));
 				for (i = 0; i < 65; i++)
 				{
