@@ -272,10 +272,9 @@ int main(int argc, char** argv)
 	refresh();
 
 
+	c = ' ';
 	while (1)
 	{
-		c = getch();
-
 		switch (c)
 		{
 			case 'l':
@@ -648,6 +647,7 @@ int main(int argc, char** argv)
 
 
 		refresh();
+		c = getch();
 	}
 
 
