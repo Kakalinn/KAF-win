@@ -334,7 +334,7 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "  ...q twice to close window.                                  ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...Q to close the window.                                    ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...g to show the planes that are about to land.              ");
-				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...u to change between          and                          ");
+				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...u to change between          and           .              ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
