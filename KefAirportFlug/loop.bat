@@ -4,7 +4,7 @@ echo %CD%
 
 echo %date:~5% - %time:~0,-3% - Updating flights (Pressing a key in this window forces a refresh)
 del komur
-wget "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur" -q
+"..\wget" "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur" -q
 powershell "(Get-Date).ToString('yyyy-MM-dd HH:mm:ss') + ' (Press F5 to refresh)'" > out.fly
 kvl komur >> out.fly
 
@@ -15,7 +15,7 @@ TIMEOUT /T 30
 :loop
 echo %date:~5% - %time:~0,-3% - Updating flights (Pressing a key in this window forces a refresh)
 del komur*
-wget "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur" -q
+"..\wget" "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur" -q
 powershell "(Get-Date).ToString('yyyy-MM-dd HH:mm:ss') + ' (Press F5 to refresh)'" > out.fly
 kvl komur >> out.fly
 TIMEOUT /T 30

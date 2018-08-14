@@ -2,8 +2,8 @@ cd %1
 del komur*
 del brottfarir*
 
-wget "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur"
-wget "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/brottfarir"
+"..\wget" "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/komur"
+"..\wget" "https://www.isavia.is/keflavikurflugvollur/flugaaetlun/brottfarir"
 
 echo ~~~-~~~ > out.fly
 powershell "(Get-Date).ToString('yyyy-MM-dd HH:mm:ss')" >> out.fly
