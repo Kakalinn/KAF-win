@@ -10,6 +10,8 @@ int main(int argc, char** argv)
 	int i, j, x, y, size[2], cur;
 	int window_view = 0; /* 0 = komur, 1 = brottfarir */
 	char last_rfr[20];
+	char border_str[] = "Charlone Valerino | ";
+	char border_len = strlen(border_str);
 	last_rfr[19] = '\0';
 
 	WINDOW* win = initscr();
@@ -269,6 +271,16 @@ int main(int argc, char** argv)
 		attron(COLOR_PAIR(1));
 		mvprintw(y - 1, x/2 + 34, "%d%c", percentage, '%');
 	}
+
+	if (x > 170)
+	{
+		for (i = 0; i < y; i++)
+		{
+			mvaddch(i, 1, border_str[i%border_len]);
+			mvaddch(i, x - 2, border_str[(i + cur)%border_len]);
+		}
+	}
+
 	refresh();
 
 
@@ -656,6 +668,14 @@ int main(int argc, char** argv)
 		}
 
 
+		if (x > 170)
+		{
+			for (i = 0; i < y; i++)
+			{
+				mvaddch(i, 1, border_str[(i + cur)%border_len]);
+				mvaddch(i, x - 2, border_str[(i + cur)%border_len]);
+			}
+		}
 		refresh();
 		c = getch();
 	}
