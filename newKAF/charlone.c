@@ -368,9 +368,9 @@ int main(int argc, char** argv)
 
 			case 'r':
 				attron(COLOR_PAIR(7));
-				mvprintw(y/3 - 1, x/2, "              ");
-				mvprintw(y/3,     x/2, "  REFRESHING  ");
-				mvprintw(y/3 + 1, x/2, "              ");
+				mvprintw(y/3 - 1, x/2 - 10, "              ");
+				mvprintw(y/3,     x/2 - 10, "  REFRESHING  ");
+				mvprintw(y/3 + 1, x/2 - 10, "              ");
 				refresh();
 
 
@@ -475,12 +475,12 @@ int main(int argc, char** argv)
 				break;
 			case 'q':
 				attron(COLOR_PAIR(7));
-				mvprintw(y/3 - 2, x/2, "                      ");
-				mvprintw(y/3 - 1, x/2, "  You are about quit  ");
-				mvprintw(y/3,     x/2, "  this program.       ");
-				mvprintw(y/3 + 1, x/2, "  Press q again if    ");
-				mvprintw(y/3 + 2, x/2, "  you are sure.       ");
-				mvprintw(y/3 + 3, x/2, "                      ");
+				mvprintw(y/3 - 2, x/2 - 15, "                      ");
+				mvprintw(y/3 - 1, x/2 - 15, "  You are about quit  ");
+				mvprintw(y/3,     x/2 - 15, "  this program.       ");
+				mvprintw(y/3 + 1, x/2 - 15, "  Press q again if    ");
+				mvprintw(y/3 + 2, x/2 - 15, "  you are sure.       ");
+				mvprintw(y/3 + 3, x/2 - 15, "                      ");
 				refresh();
 				c = getch();
 				break;
@@ -637,22 +637,22 @@ int main(int argc, char** argv)
 		if (percentage == 0)
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, x/2 - 34, "TOP");
+			mvprintw(y - 1, x/2 + 34, "TOP");
 		}
 		else if (percentage >= 100)
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, x/2 - 34, "BOT");
+			mvprintw(y - 1, x/2 + 34, "BOT");
 		}
 		else if (percentage < 10)
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, x/2 - 34, " %d%c", percentage, '%');
+			mvprintw(y - 1, x/2 + 34, " %d%c", percentage, '%');
 		}
 		else
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, x/2 - 34, "%d%c", percentage, '%');
+			mvprintw(y - 1, x/2 + 34, "%d%c", percentage, '%');
 		}
 
 
