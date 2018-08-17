@@ -7,7 +7,7 @@ void play_intro(int x, int y)
 	int level = y/2 - 8;
 
 	i = level;
-	j = x/2 - 33;
+	j = x/2 - 32;
 	mvprintw(i++, j, ".:::.    .:::.");
 	mvprintw(i++, j, ":::::    :::::");
 	mvprintw(i++, j, ":::::    :::::");
@@ -64,7 +64,7 @@ void play_intro(int x, int y)
 	Sleep(wait_time);
 
 	i = level;
-	j = x/2 + 20;
+	j = x/2 + 19;
 	attron(COLOR_PAIR(6));
 	mvprintw(i++, j, "        ..::           ");
 	mvprintw(i++, j, "     ..::::'        .:.");
