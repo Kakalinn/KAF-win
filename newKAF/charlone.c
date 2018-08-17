@@ -190,59 +190,59 @@ int main(int argc, char** argv)
 	for (i = 0; i < y; i++)
 	{
 		attron(COLOR_PAIR(1));
-		mvprintw(i, 0, "%s", file[window_view][cur + i]);
+		mvprintw(i, x/2 - 64, "%s", file[window_view][cur + i]);
 		clrtoeol();
 
 		if (file[window_view][i][88] == 'L')
 		{
 			attron(COLOR_PAIR(5));
-			mvprintw(i, 88, "%s", "Landed");
+			mvprintw(i, x/2 + 24, "%s", "Landed");
 		}
 		else if (file[window_view][i][88] == 'C' && file[window_view][i][89] == 'a')
 		{
 			attron(COLOR_PAIR(4));
-			mvprintw(i, 88, "%s", "Cancelled");
+			mvprintw(i, x/2 + 24, "%s", "Cancelled");
 		}
 		else if (file[window_view][i][88] == 'C' && file[window_view][i][89] == 'o')
 		{
 			attron(COLOR_PAIR(2));
-			mvprintw(i, 88, "%s", "Confirmed");
+			mvprintw(i, x/2 + 24, "%s", "Confirmed");
 		}
 		else if (file[window_view][i][88] == 'E')
 		{
 			attron(COLOR_PAIR(3));
-			mvprintw(i, 88, "%s", "Expected");
+			mvprintw(i, x/2 + 24, "%s", "Expected");
 		}
 
 		if (i%2 == 1 && i > 1 && file[window_view][i][0] != '\0')
 		{
 			attron(COLOR_PAIR(6));
-			mvaddch(i, 0, file[window_view][i][0]);
-			mvaddch(i, 1, file[window_view][i][1]);
-			mvaddch(i, 2, file[window_view][i][2]);
-			mvaddch(i, 3, file[window_view][i][3]);
-			mvaddch(i, 4, file[window_view][i][4]);
-			mvaddch(i, 5, file[window_view][i][5]);
+			mvaddch(i, x/2 - 64, file[window_view][i][0]);
+			mvaddch(i, x/2 - 63, file[window_view][i][1]);
+			mvaddch(i, x/2 - 62, file[window_view][i][2]);
+			mvaddch(i, x/2 - 61, file[window_view][i][3]);
+			mvaddch(i, x/2 - 60, file[window_view][i][4]);
+			mvaddch(i, x/2 - 59, file[window_view][i][5]);
 		}
 	}
 	attron(COLOR_PAIR(7));
-	mvprintw(y - 2, 0, "------'-------------------------------------------------------------------------------------------------------------------------");
+	mvprintw(y - 2, x/2 - 64, "------'-------------------------------------------------------------------------------------------------------------------------");
 	attron(COLOR_PAIR(1));
-	mvprintw(y - 1, 0, "                                                                                                                                ");
+	mvprintw(y - 1, x/2 - 64, "                                                                                                                                ");
 
 	if (window_view == 0)
 	{
 		attron(COLOR_PAIR(3));
-		mvprintw(y - 1, 8, "Arrivals");
+		mvprintw(y - 1, x/2 - 56, "Arrivals");
 	}
 	else if (window_view == 1)
 	{
 		attron(COLOR_PAIR(5));
-		mvprintw(y - 1, 8, "Departures");
+		mvprintw(y - 1, x/2 - 56, "Departures");
 	}
 
 	attron(COLOR_PAIR(1));
-	mvprintw(y - 1, 40, "Last update:");
+	mvprintw(y - 1, x/2 - 24, "Last update:");
 	attron(COLOR_PAIR(4));
 	printw(" %s", last_rfr);
 
@@ -252,22 +252,22 @@ int main(int argc, char** argv)
 	if (percentage == 0)
 	{
 		attron(COLOR_PAIR(1));
-		mvprintw(y - 1, 98, "TOP");
+		mvprintw(y - 1, x/2 + 34, "TOP");
 	}
 	else if (percentage >= 100)
 	{
 		attron(COLOR_PAIR(1));
-		mvprintw(y - 1, 98, "BOT");
+		mvprintw(y - 1, x/2 + 34, "BOT");
 	}
 	else if (percentage < 10)
 	{
 		attron(COLOR_PAIR(1));
-		mvprintw(y - 1, 98, " %d%c", percentage, '%');
+		mvprintw(y - 1, x/2 + 34, " %d%c", percentage, '%');
 	}
 	else
 	{
 		attron(COLOR_PAIR(1));
-		mvprintw(y - 1, 98, "%d%c", percentage, '%');
+		mvprintw(y - 1, x/2 + 34, "%d%c", percentage, '%');
 	}
 	refresh();
 
@@ -307,18 +307,18 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(7));
 				for (i = 0; i < 65; i++)
 				{
-					mvaddch(4, i + 4, ' ');
-					mvaddch(35, i + 4, ' ');
+					mvaddch(4, x/2 - 60 + i, ' ');
+					mvaddch(35, x/2 - 60 + i, ' ');
 				}
 				for (i = 5; i < 35; i++)
 				{
-					mvaddch(i, 4, ' ');
-					mvaddch(i, 68, ' ');
+					mvaddch(i, x/2 - 60, ' ');
+					mvaddch(i, x/2 + 4, ' ');
 				}
 
 				attron(COLOR_PAIR(1));
 				i = 5;
-				j = 5;
+				j = x/2 - 59;
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, " Press...                                                      ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...j to go down one line.                                    ");
@@ -351,8 +351,8 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(1)); mvprintw(i,   j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, " Last refresh: %s", last_rfr);
 
-				attron(COLOR_PAIR(3)); mvprintw(20, 30, "Arrivals");
-				attron(COLOR_PAIR(5)); mvprintw(20, 43, "Departures");
+				attron(COLOR_PAIR(3)); mvprintw(20, x/2 - 34, "Arrivals");
+				attron(COLOR_PAIR(5)); mvprintw(20, x/2 - 21, "Departures");
 
 
 
@@ -368,9 +368,9 @@ int main(int argc, char** argv)
 
 			case 'r':
 				attron(COLOR_PAIR(7));
-				mvprintw(y/3 - 1, x/4, "              ");
-				mvprintw(y/3,     x/4, "  REFRESHING  ");
-				mvprintw(y/3 + 1, x/4, "              ");
+				mvprintw(y/3 - 1, x/2, "              ");
+				mvprintw(y/3,     x/2, "  REFRESHING  ");
+				mvprintw(y/3 + 1, x/2, "              ");
 				refresh();
 
 
@@ -475,12 +475,12 @@ int main(int argc, char** argv)
 				break;
 			case 'q':
 				attron(COLOR_PAIR(7));
-				mvprintw(y/3 - 2, x/4, "                      ");
-				mvprintw(y/3 - 1, x/4, "  You are about quit  ");
-				mvprintw(y/3,     x/4, "  this program.       ");
-				mvprintw(y/3 + 1, x/4, "  Press q again if    ");
-				mvprintw(y/3 + 2, x/4, "  you are sure.       ");
-				mvprintw(y/3 + 3, x/4, "                      ");
+				mvprintw(y/3 - 2, x/2, "                      ");
+				mvprintw(y/3 - 1, x/2, "  You are about quit  ");
+				mvprintw(y/3,     x/2, "  this program.       ");
+				mvprintw(y/3 + 1, x/2, "  Press q again if    ");
+				mvprintw(y/3 + 2, x/2, "  you are sure.       ");
+				mvprintw(y/3 + 3, x/2, "                      ");
 				refresh();
 				c = getch();
 				break;
@@ -550,84 +550,84 @@ int main(int argc, char** argv)
 		for (i = 0; i < y; i++)
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(i, 0, "%s", file[window_view][cur + i]);
+			mvprintw(i, x/2 - 64, "%s", file[window_view][cur + i]);
 			clrtoeol();
 
 			if (file[window_view][cur + i][88] == 'L')
 			{
 				attron(COLOR_PAIR(5));
-				mvprintw(i, 88, "%s", "Landed");
+				mvprintw(i, x/2 + 24, "%s", "Landed");
 			}
 			else if (file[window_view][cur + i][88] == 'C' && file[window_view][cur + i][89] == 'a')
 			{
 				attron(COLOR_PAIR(4));
-				mvprintw(i, 88, "%s", "Cancelled");
+				mvprintw(i, x/2 + 24, "%s", "Cancelled");
 			}
 			else if (file[window_view][cur + i][88] == 'C' && file[window_view][cur + i][89] == 'o')
 			{
 				attron(COLOR_PAIR(2));
-				mvprintw(i, 88, "%s", "Confirmed");
+				mvprintw(i, x/2 + 24, "%s", "Confirmed");
 			}
 			else if (file[window_view][cur + i][88] == 'E')
 			{
 				attron(COLOR_PAIR(3));
-				mvprintw(i, 88, "%s", "Expected");
+				mvprintw(i, x/2 + 24, "%s", "Expected");
 			}
 			else if (file[window_view][cur + i][88] == 'D')
 			{
 				attron(COLOR_PAIR(5));
-				mvprintw(i, 88, "%s", "Departed");
+				mvprintw(i, x/2 + 24, "%s", "Departed");
 			}
 			else if (file[window_view][cur + i][88] == 'G' && file[window_view][cur + i][93] == 'c')
 			{
 				attron(COLOR_PAIR(6));
-				mvprintw(i, 88, "%s", "Gate closed");
+				mvprintw(i, x/2 + 24, "%s", "Gate closed");
 			}
 			else if (file[window_view][cur + i][88] == 'G' && file[window_view][cur + i][93] == ' ')
 			{
 				attron(COLOR_PAIR(2));
-				mvprintw(i, 88, "%s", "Go to gate");
+				mvprintw(i, x/2 + 24, "%s", "Go to gate");
 			}
 			else if (file[window_view][cur + i][88] == 'G' && file[window_view][cur + i][93] == 'o')
 			{
 				attron(COLOR_PAIR(3));
-				mvprintw(i, 88, "%s", "Gate opened");
+				mvprintw(i, x/2 + 24, "%s", "Gate opened");
 			}
 			else if (file[window_view][cur + i][88] == 'F')
 			{
 				attron(COLOR_PAIR(4));
-				mvprintw(i, 88, "%s", "Final call");
+				mvprintw(i, x/2 + 24, "%s", "Final call");
 			}
 
 			if (i%2 == 1 && i + cur != 1 && i + cur != size[window_view] - 1 && file[window_view][cur + i][0] != '\0')
 			{
 				attron(COLOR_PAIR(6));
-				mvaddch(i, 0, file[window_view][cur + i][0]);
-				mvaddch(i, 1, file[window_view][cur + i][1]);
-				mvaddch(i, 2, file[window_view][cur + i][2]);
-				mvaddch(i, 3, file[window_view][cur + i][3]);
-				mvaddch(i, 4, file[window_view][cur + i][4]);
-				mvaddch(i, 5, file[window_view][cur + i][5]);
+				mvaddch(i, x/2 - 64, file[window_view][cur + i][0]);
+				mvaddch(i, x/2 - 63, file[window_view][cur + i][1]);
+				mvaddch(i, x/2 - 62, file[window_view][cur + i][2]);
+				mvaddch(i, x/2 - 61, file[window_view][cur + i][3]);
+				mvaddch(i, x/2 - 60, file[window_view][cur + i][4]);
+				mvaddch(i, x/2 - 59, file[window_view][cur + i][5]);
 			}
 		}
 		attron(COLOR_PAIR(7));
-		mvprintw(y - 2, 0, "------'-------------------------------------------------------------------------------------------------------------------------");
+		mvprintw(y - 2, x/2 - 64, "------'-------------------------------------------------------------------------------------------------------------------------");
 		attron(COLOR_PAIR(1));
-		mvprintw(y - 1, 0, "                                                                                                                                ");
+		mvprintw(y - 1, x/2 - 64, "                                                                                                                                ");
 
 		if (window_view == 0)
 		{
 			attron(COLOR_PAIR(3));
-			mvprintw(y - 1, 8, "Arrivals");
+			mvprintw(y - 1, x/2 - 56, "Arrivals");
 		}
 		else if (window_view == 1)
 		{
 			attron(COLOR_PAIR(5));
-			mvprintw(y - 1, 8, "Departures");
+			mvprintw(y - 1, x/2 - 56, "Departures");
 		}
 
 		attron(COLOR_PAIR(1));
-		mvprintw(y - 1, 40, "Last update:");
+		mvprintw(y - 1, x/2 - 24, "Last update:");
 		attron(COLOR_PAIR(4));
 		printw(" %s", last_rfr);
 
@@ -637,22 +637,22 @@ int main(int argc, char** argv)
 		if (percentage == 0)
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, 98, "TOP");
+			mvprintw(y - 1, x/2 - 34, "TOP");
 		}
 		else if (percentage >= 100)
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, 98, "BOT");
+			mvprintw(y - 1, x/2 - 34, "BOT");
 		}
 		else if (percentage < 10)
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, 98, " %d%c", percentage, '%');
+			mvprintw(y - 1, x/2 - 34, " %d%c", percentage, '%');
 		}
 		else
 		{
 			attron(COLOR_PAIR(1));
-			mvprintw(y - 1, 98, "%d%c", percentage, '%');
+			mvprintw(y - 1, x/2 - 34, "%d%c", percentage, '%');
 		}
 
 
