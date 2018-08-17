@@ -1,3 +1,5 @@
+git pull origin master
+
 del KefAirportFlug\kvl.exe
 del KefAirportFlug\komur
 del KefAirportFlug\out.fly
