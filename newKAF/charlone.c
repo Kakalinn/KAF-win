@@ -7,7 +7,7 @@
 int main(int argc, char** argv)
 {
 	int c;
-	int i, j, x, y, size[2], cur, colorscheme = 1;
+	int i, j, x, y, size[2], cur, colorscheme = 0;
 	int window_view = 0; /* 0 = komur, 1 = brottfarir */
 	char last_rfr[20];
 	char border_str[] = "Charlone Valerino | ";
