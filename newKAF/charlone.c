@@ -7,7 +7,7 @@
 int main(int argc, char** argv)
 {
 	int c;
-	int i, j, x, y, size[2], cur;
+	int i, j, x, y, size[2], cur, colorscheme = 1;
 	int window_view = 0; /* 0 = komur, 1 = brottfarir */
 	char last_rfr[20];
 	char border_str[] = "Charlone Valerino | ";
@@ -346,8 +346,8 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "  ...q twice to close window.                                  ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...Q to close the window.                                    ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...g to show the planes that are about to land.              ");
+				attron(COLOR_PAIR(1)); mvprintw(i++, j, "  ...c to change between colorschemes.                         ");
 				attron(COLOR_PAIR(2)); mvprintw(i++, j, "  ...u to change between          and           .              ");
-				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, "                                                               ");
@@ -363,8 +363,8 @@ int main(int argc, char** argv)
 				attron(COLOR_PAIR(1)); mvprintw(i,   j, "                                                               ");
 				attron(COLOR_PAIR(1)); mvprintw(i++, j, " Last refresh: %s", last_rfr);
 
-				attron(COLOR_PAIR(3)); mvprintw(20, x/2 - 34, "Arrivals");
-				attron(COLOR_PAIR(5)); mvprintw(20, x/2 - 21, "Departures");
+				attron(COLOR_PAIR(3)); mvprintw(21, x/2 - 34, "Arrivals");
+				attron(COLOR_PAIR(5)); mvprintw(21, x/2 - 21, "Departures");
 
 
 
@@ -536,6 +536,29 @@ int main(int argc, char** argv)
 				break;
 			case 'H':
 				cur = size[window_view] - y;
+				break;
+			case 'c':
+				colorscheme = (colorscheme + 1)%2;
+				if (colorscheme == 0)
+				{
+					init_pair(1, COLOR_WHITE,  COLOR_BLACK);
+					init_pair(2, COLOR_GREEN,  COLOR_BLACK);
+					init_pair(3, COLOR_YELLOW, COLOR_BLACK);
+					init_pair(4, COLOR_RED,    COLOR_BLACK);
+					init_pair(5, COLOR_CYAN,   COLOR_BLACK);
+					init_pair(6, COLOR_MAGENTA,   COLOR_BLACK);
+					init_pair(7, COLOR_BLACK,  COLOR_WHITE);
+				}
+				else if (colorscheme == 1)
+				{
+					init_pair(1, COLOR_BLACK,  COLOR_WHITE);
+					init_pair(2, COLOR_GREEN,  COLOR_WHITE);
+					init_pair(3, COLOR_YELLOW, COLOR_WHITE);
+					init_pair(4, COLOR_RED,    COLOR_WHITE);
+					init_pair(5, COLOR_CYAN,   COLOR_WHITE);
+					init_pair(6, COLOR_MAGENTA,   COLOR_WHITE);
+					init_pair(7, COLOR_WHITE,  COLOR_BLACK);
+				}
 				break;
 		}
 		if (c == 'q')
