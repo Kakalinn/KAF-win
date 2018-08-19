@@ -283,7 +283,7 @@ int main(int argc, char** argv)
 
 			else if(itemc == 4)
 			{
-				if (line[37] == '\0')
+				if (line[37] == '\0' || line[32] == '\"')
 				{
 					l[flightc].state = 'z';
 				}
