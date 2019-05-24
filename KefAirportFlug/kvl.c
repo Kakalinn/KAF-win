@@ -312,6 +312,10 @@ int main(int argc, char** argv)
 						l[flightc].stime[4] = line[72];
 						l[flightc].stime[5] = '\0';
 					}
+					else if (line[54] == 'n')
+					{
+						l[flightc].state = 'z';
+					}
 					else
 					{
 						l[flightc].state = 'u';
