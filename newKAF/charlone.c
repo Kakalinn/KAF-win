@@ -19,11 +19,18 @@ int main(int argc, char** argv)
 	int i, j, x, y, size[2], cur, colorscheme = 0;
 	int window_view = 0; /* 0 = komur, 1 = brottfarir */
 	char last_rfr[20];
+	/* 
+	 * To add names to the list it suffices to add strings to the array below.
+	 * They MUST however all be the same length, and said length must match that
+	 * in the initialization
+	 * */
 	char border_str[][21] =
 	{
 		" | Charlone Valerino",
 		" | Elko master race ",
+		" | Godemperor Vifill",
 		" | Einar Snorri     ",
+		" | Bergur sysadmin  ",
 		" | Dat boi Boas     ",
 		" | Eidur Geir       ",
 		" | Gummi Freyr      ",
@@ -32,7 +39,7 @@ int main(int argc, char** argv)
 		" | Marteinn         ",
 		" | Raggi Orn        ",
 		" | Vanessa          ",
-		" | Oli Gestur       ",
+		" | Oli Kun uwu      ",
 		" | Steini           ",
 		" | Olof             ",
 		" | Ottar            ",
@@ -44,12 +51,16 @@ int main(int argc, char** argv)
 		" | Sonja Dufa       ",
 		" |                  ",
 	};
-	int border_num = rand()%(sizeof(border_str)/sizeof(border_str[0]));
-	i = rand()%3;
-	if (i != 3) border_num = i;
+	int border_size = sizeof(border_str)/sizeof(border_str[0]);
+	int border_num = rand()%border_size;
 	char border_len = strlen(border_str[border_num]);
-	while (border_str[border_num][border_len - 1] == ' ') border_len--;
-	border_str[border_num][border_len] = '\0';
+	for (i = 0; i < border_size; i++)
+	{
+		j = border_len;
+		while (border_str[i][j - 1] == ' ') j--;
+		border_str[i][j] = '\0';
+	}
+	border_len = strlen(border_str[border_num]);
 	last_rfr[19] = '\0';
 
 	WINDOW* win = initscr();
@@ -451,6 +462,8 @@ int main(int argc, char** argv)
 				break;
 
 			case 'r':
+				border_num = rand()%border_size;
+				border_len = strlen(border_str[border_num]);
 				attron(COLOR_PAIR(7));
 				mvprintw(y/3 - 1, x/2 - 10, "              ");
 				mvprintw(y/3,     x/2 - 10, "  REFRESHING  ");
