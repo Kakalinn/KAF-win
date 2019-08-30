@@ -6,18 +6,50 @@
 #include <windows.h>
 #endif
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 #include <curses.h>
 #include "intro.h"
 
 int main(int argc, char** argv)
 {
+	srand(time(NULL));
 	int c;
 	int i, j, x, y, size[2], cur, colorscheme = 0;
 	int window_view = 0; /* 0 = komur, 1 = brottfarir */
 	char last_rfr[20];
-	char border_str[] = "Charlone Valerino | ";
-	char border_len = strlen(border_str);
+	char border_str[][21] =
+	{
+		" | Charlone Valerino",
+		" | Elko master race ",
+		" | Einar Snorri     ",
+		" | Dat boi Boas     ",
+		" | Eidur Geir       ",
+		" | Gummi Freyr      ",
+		" | Gummi Lar        ",
+		" | Heimir           ",
+		" | Marteinn         ",
+		" | Raggi Orn        ",
+		" | Vanessa          ",
+		" | Oli Gestur       ",
+		" | Steini           ",
+		" | Olof             ",
+		" | Ottar            ",
+		" | Jakob            ",
+		" | Hulda            ",
+		" | Jakob            ",
+		" | Tvinni           ",
+		" | Poul Walker      ",
+		" | Sonja Dufa       ",
+		" |                  ",
+	};
+	int border_num = rand()%(sizeof(border_str)/sizeof(border_str[0]));
+	i = rand()%3;
+	if (i != 3) border_num = i;
+	char border_len = strlen(border_str[border_num]);
+	while (border_str[border_num][border_len - 1] == ' ') border_len--;
+	border_str[border_num][border_len] = '\0';
 	last_rfr[19] = '\0';
 
 	WINDOW* win = initscr();
@@ -316,8 +348,8 @@ int main(int argc, char** argv)
 	{
 		for (i = 0; i < y; i++)
 		{
-			mvaddch(i, 1, border_str[i%border_len]);
-			mvaddch(i, x - 2, border_str[(i + cur)%border_len]);
+			mvaddch(i, 1, border_str[border_num][i%border_len]);
+			mvaddch(i, x - 2, border_str[border_num][(i + cur)%border_len]);
 		}
 	}
 
@@ -755,8 +787,8 @@ int main(int argc, char** argv)
 		{
 			for (i = 0; i < y; i++)
 			{
-				mvaddch(i, 1, border_str[(i + cur)%border_len]);
-				mvaddch(i, x - 2, border_str[(i + cur)%border_len]);
+				mvaddch(i, 1, border_str[border_num][(i + cur)%border_len]);
+				mvaddch(i, x - 2, border_str[border_num][(i + cur)%border_len]);
 			}
 		}
 		refresh();
