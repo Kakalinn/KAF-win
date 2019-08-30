@@ -1,7 +1,16 @@
+#ifdef KAF_LINUX
+#define SLEEP sleep
+#else
+#define SLEEP Sleep
+#endif
 void play_intro(int x, int y)
 {
 	int i, j;
+#ifdef KAF_LINUX
+	int wait_time = 1;
+#else
 	int wait_time = 1000;
+#endif
 	attron(COLOR_PAIR(5));
 
 	int level = y/2 - 8;
@@ -23,7 +32,7 @@ void play_intro(int x, int y)
 	mvprintw(i++, j, "':::'    ':::'");
 	flash();
 	refresh();
-	Sleep(wait_time);
+	SLEEP(wait_time);
 
 	i = level;
 	j = x/2 - 15;
@@ -42,7 +51,7 @@ void play_intro(int x, int y)
 	mvprintw(i++, j, "':::'    ':::'");
 	flash();
 	refresh();
-	Sleep(wait_time);
+	SLEEP(wait_time);
 
 	i = level;
 	j = x/2 + 2;
@@ -61,7 +70,7 @@ void play_intro(int x, int y)
 	mvprintw(i++, j, "':::'         ");
 	flash();
 	refresh();
-	Sleep(wait_time);
+	SLEEP(wait_time);
 
 	i = level;
 	j = x/2 + 19;
@@ -81,7 +90,7 @@ void play_intro(int x, int y)
 	mvprintw(i++, j, "                   ''  ");
 	flash();
 	refresh();
-	Sleep(wait_time*2);
+	SLEEP(wait_time*2);
 
 	return;
 }

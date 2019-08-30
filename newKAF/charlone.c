@@ -1,4 +1,10 @@
+#ifdef KAF_LINUX
+#include <unistd.h>
+#include <sys/wait.h>
+#include "local.h"
+#else
 #include <windows.h>
+#endif
 #include <string.h>
 #include <stdio.h>
 #include <curses.h>
@@ -31,9 +37,9 @@ int main(int argc, char** argv)
 
 	getmaxyx(win, y, x);
 
+#ifndef KAF_LINUX
 	STARTUPINFO si = {sizeof(si)};
 	PROCESS_INFORMATION pi;
-
 
 	int tmpl = strlen(argv[0]);
 	char loc[tmpl];
@@ -96,6 +102,32 @@ int main(int argc, char** argv)
 		printf("execution terminated\n");
 		return 6;
 	}
+#else
+	pid_t pid = fork();
+
+	if (pid == 0)
+	{
+		char* script[] = {LOCATION"rfr.sh", LOCATION, NULL};
+		execv(LOCATION"rfr.sh", script);
+		return 10;
+	}
+	else
+	{
+		play_intro(x, y);
+
+		int status = 0;
+		wait(&status);
+	}
+
+	FILE* fp_brottfor = fopen(LOCATION"inn.fly", "r");
+
+	if (!fp_brottfor)
+	{
+		printf("%s: fatal error: could not open file \"%s\"\n", argv[0], LOCATION"inn.fly");
+		printf("execution terminated\n");
+		return 6;
+	}
+#endif
 
 	char file[2][512][256];
 
@@ -136,14 +168,22 @@ int main(int argc, char** argv)
 		file[1][i][0] = '\0';
 	}
 
+#ifndef KAF_LINUX
 	loc[loc_loc + 0] = 'o';
 	loc[loc_loc + 1] = 'u';
 	loc[loc_loc + 2] = 't';
 	FILE* fp_komur = fopen(loc, "r");
+#else
+	FILE* fp_komur = fopen(LOCATION"out.fly", "r");
+#endif
 
 	if (!fp_komur)
 	{
+#ifndef KAF_LINUX
 		printf("%s: fatal error: could not open file \"%s\"\n", argv[0], loc);
+#else
+		printf("%s: fatal error: could not open file \"%s\"\n", argv[0], LOCATION"out.fly");
+#endif
 		printf("execution terminated\n");
 		return 6;
 	}
@@ -385,7 +425,7 @@ int main(int argc, char** argv)
 				mvprintw(y/3 + 1, x/2 - 10, "              ");
 				refresh();
 
-
+#ifndef KAF_LINUX
 				refresh();
 				if (!CreateProcess(NULL, batloc, NULL, NULL, 1, CREATE_NO_WINDOW, NULL, NULL, &si, &pi))
 				{
@@ -400,6 +440,23 @@ int main(int argc, char** argv)
 				loc[loc_loc + 1] = 'n';
 				loc[loc_loc + 2] = 'n';
 				fp_brottfor = fopen(loc, "r");
+#else
+				pid_t pid = fork();
+
+				if (pid == 0)
+				{
+					char* script[] = {LOCATION"rfr.sh", LOCATION, NULL};
+					execv(LOCATION"rfr.sh", script);
+					return 0;
+				}
+				else
+				{
+					int status = 0;
+					wait(&status);
+				}
+
+				fp_brottfor = fopen(LOCATION"inn.fly", "r");
+#endif
 
 				i = 0;
 				j = 0;
@@ -437,11 +494,14 @@ int main(int argc, char** argv)
 					file[1][i][0] = '\0';
 				}
 
-
+#ifndef KAF_LINUX
 				loc[loc_loc + 0] = 'o';
 				loc[loc_loc + 1] = 'u';
 				loc[loc_loc + 2] = 't';
 				fp_komur = fopen(loc, "r");
+#else
+				fp_komur = fopen(LOCATION"out.fly", "r");
+#endif
 
 				i = 0;
 				j = 0;
