@@ -52,14 +52,8 @@ int flightcomp(const void* a, const void* b)
 		default:
 			strcpy(p, r->stime);
 
-			if (r->time[0] == '0' && r->time[1] < '8' && r->stime[0] == '2')
-			{
-				p[0] = '.';
-			}
-			else if (r->time[0] == '2' && r->stime[0] == '0')
-			{
-				p[0] = '~';
-			}
+			if (r->time[0] == '0' && r->time[1] < '8' && r->stime[0] == '2') p[0] = '.';
+			else if (r->time[0] == '2' && r->stime[0] == '0') p[0] = '~';
 
 			break;
 	}
@@ -72,20 +66,12 @@ int flightcomp(const void* a, const void* b)
 		case 'g':
 		case 't':
 		case 's':
-		case 'd':
-			strcpy(q, s->time);
-			break;
+		case 'd': strcpy(q, s->time); break;
 		default:
 			strcpy(q, s->stime);
 
-			if (s->time[0] == '0' && s->time[1] < '8' && s->stime[0] == '2')
-			{
-				q[0] = '.';
-			}
-			else if (s->time[0] == '2' && s->stime[0] == '0')
-			{
-				q[0] = '~';
-			}
+			if (s->time[0] == '0' && s->time[1] < '8' && s->stime[0] == '2') q[0] = '.';
+			else if (s->time[0] == '2' && s->stime[0] == '0') q[0] = '~';
 
 			break;
 	}
@@ -114,88 +100,46 @@ int main(int argc, char** argv)
 	while (1)
 	{
 		c = fgetc(fp);
-		if (c == EOF)
-		{
-			break;
-		}
-
-
-		/* IGNORE WHITESPACES */
+		if (c == EOF) break;
+		/* IGNORE LEADING WHITESPACES */
 		for (; c == ' ' || c == '\t'; c = fgetc(fp));
-
 		/* READ LINE TO BUFFER */
-		for (i = 0; c != 10 && c != EOF; i++, c = fgetc(fp))
-		{
-			line[i] = c;
-		}
+		for (i = 0; c != 10 && c != EOF; i++, c = fgetc(fp)) line[i] = c;
+		/* IGNORE TRAILING WHITESPACES */
 		while (line[i - 1] == 13) i--;
 		line[i] = '\0';
-
-		if (strcmp("<table class=\"table-schedule\">", line) == 0)
-		{
-			break;
-		}
+		if (strcmp("<table class=\"table-schedule\">", line) == 0) break;
 	}
 
 	while (1)
 	{
 		c = fgetc(fp);
-		if (c == EOF)
-		{
-			break;
-		}
-
-
-		/* IGNORE WHITESPACES */
+		if (c == EOF) break;
+		/* IGNORE LEADING WHITESPACES */
 		for (; c == ' ' || c == '\t'; c = fgetc(fp));
-
 		/* READ LINE TO BUFFER */
-		for (i = 0; c != 10 && c != EOF; i++, c = fgetc(fp))
-		{
-			line[i] = c;
-		}
+		for (i = 0; c != 10 && c != EOF; i++, c = fgetc(fp)) line[i] = c;
+		/* IGNORE TRAILING WHITESPACES */
 		while (line[i - 1] == 13) i--;
 		line[i] = '\0';
-
-		//printf("%s\n", line);
-
-		if (strcmp("<tbody>", line) == 0)
-		{
-			break;
-		}
+		if (strcmp("<tbody>", line) == 0) break;
 	}
-
-	while (c == 10)
-	{
-		c = fgetc(fp);
-	}
-
+	while (c == 10) c = fgetc(fp);
 	int flightc = 0;
 	int itemc = 0;
 	while (1)
 	{
 		c = fgetc(fp);
-		if (c == EOF)
-		{
-			break;
-		}
-
-		/* IGNORE WHITESPACES */
+		if (c == EOF) break;
+		/* IGNORE LEADING WHITESPACES */
 		for (; c == ' ' || c == '\t'; c = fgetc(fp));
-
 		/* READ LINE TO BUFFER */
-		for (i = 0; c != 10 && c != EOF; i++, c = fgetc(fp))
-		{
-			line[i] = c;
-		}
+		for (i = 0; c != 10 && c != EOF; i++, c = fgetc(fp)) line[i] = c;
+		/* IGNORE TRAILING WHITESPACES */
 		while (line[i - 1] == 13) i--;
 		line[i] = '\0';
 
-		if (i == 0 || line[1] == 't' && line[2] == 'r')
-		{
-			/* NOP */
-		}
-
+		if (i == 0 || line[1] == 't' && line[2] == 'r') { /* NOP */ }
 		else if (line[1] == 't' && line[2] == 'd')
 		{
 			if (itemc == 0)
@@ -221,36 +165,25 @@ int main(int argc, char** argv)
 					if (line[i] == '&')
 					{
 						l[flightc].origin[i - o] = '#';
-						while (line[i] != ';')
-						{
-							i++;
-							o++;
-						}
+						while (line[i] != ';') i++, o++;
 					}
 				}
 				l[flightc].origin[i - o] = '\0';
-
 				itemc = 2;
 			}
 
 			else if(itemc == 2)
 			{
-				for (i = 4; line[i] != '<'; i++)
-				{
-					l[flightc].number[i - 4] = line[i];
-				}
+				for (i = 4; line[i] != '<'; i++) l[flightc].number[i - 4] = line[i];
 				l[flightc].number[i - 4] = '\0';
-
 				itemc = 3;
 			}
 
 			else if(itemc == 3)
 			{
 				for (i = 4; line[i] != '>'; i++);
-
 				for (i = i + 1; line[i] != '>'; i++);
 				i++;
-
 				if (line[i] != '<')
 				{
 					for (o = i; line[i] != '<'; i++)
@@ -259,11 +192,7 @@ int main(int argc, char** argv)
 						if (line[i] == '&')
 						{
 							l[flightc].airline[i - o] = '#';
-							while (line[i] != ';')
-							{
-								i++;
-								o++;
-							}
+							while (line[i] != ';') i++, o++;
 						}
 					}
 
@@ -276,17 +205,12 @@ int main(int argc, char** argv)
 					l[flightc].airline[2] = 'b';
 					l[flightc].airline[3] = '\0';
 				}
-
 				itemc = 4;
 			}
 
 			else if(itemc == 4)
 			{
-				if (line[37] == '\0' || line[32] == '\"')
-				{
-					l[flightc].state = 'z';
-				}
-
+				if (line[37] == '\0' || line[32] == '\"') l[flightc].state = 'z';
 				else if (line[32] == '&')
 				{
 					if (line[54] == 'k')
@@ -311,20 +235,11 @@ int main(int argc, char** argv)
 						l[flightc].stime[4] = line[72];
 						l[flightc].stime[5] = '\0';
 					}
-					else if (line[54] == 'n')
-					{
-						l[flightc].state = 'z';
-					}
-					else
-					{
-						l[flightc].state = 'u';
-					}
+					else if (line[54] == 'n') l[flightc].state = 'z';
+					else l[flightc].state = 'u';
 				}
 
-				else if (line[32] == 'A')
-				{
-					l[flightc].state = 'x';
-				}
+				else if (line[32] == 'A') l[flightc].state = 'x';
 
 				else if (line[32] == 'S')
 				{
@@ -351,30 +266,15 @@ int main(int argc, char** argv)
 						l[flightc].stime[4] = line[41];
 						l[flightc].stime[5] = '\0';
 					}
-					else if (line[33] == 'o')
-					{
-						l[flightc].state = 's';
-					}
-					else
-					{
-						l[flightc].state = 'u';
-					}
+					else if (line[33] == 'o') l[flightc].state = 's';
+					else l[flightc].state = 'u';
 				}
 
 				else if (line[32] == 'H')
 				{
-					if (line[41] == ' ')
-					{
-						l[flightc].state = 'd';
-					}
-					else if (line[41] == 'i')
-					{
-						l[flightc].state = 'g';
-					}
-					else
-					{
-						l[flightc].state = 'u';
-					}
+					if (line[41] == ' ') l[flightc].state = 'd';
+					else if (line[41] == 'i') l[flightc].state = 'g';
+					else l[flightc].state = 'u';
 				}
 
 				else if (line[32] == 'F')
@@ -390,28 +290,13 @@ int main(int argc, char** argv)
 						l[flightc].stime[4] = line[42];
 						l[flightc].stime[5] = '\0';
 					}
-					else if (line[35] == 'a')
-					{
-						l[flightc].state = 't';
-					}
-					else
-					{
-						l[flightc].state = 'u';
-					}
+					else if (line[35] == 'a') l[flightc].state = 't';
+					else l[flightc].state = 'u';
 				}
-
-				else
-				{
-					l[flightc].state = 'u';
-				}
-
+				else l[flightc].state = 'u';
 				itemc = 5;
 			}
-
-			else
-			{
-				/* NOP */
-			}
+			else { /* NOP */ }
 		}
 
 		else if (line[1] == '/' && line[2] == 't' && line[3] == 'r')
@@ -419,118 +304,51 @@ int main(int argc, char** argv)
 			flightc++;
 			itemc = 0;
 		}
-
-		if (strcmp("</tbody>", line) == 0)
-		{
-			break;
-		}
+		if (strcmp("</tbody>", line) == 0) break;
 	}
 
 	qsort(l, flightc, sizeof(flight), flightcomp);
 
 	for (j = 0; j < 128; j++)
 	{
-		if (j == 6)
-		{
-			putchar(':');
-		}
-		else
-		{
-			putchar('-');
-		}
+		if (j == 6) putchar(':');
+		else putchar('-');
 	}
 	putchar(10);
 
 	for (i = 0; i < flightc; i++)
 	{
 		printf("%s | ", l[i].time);
-
-		for (j = 0; l[i].origin[j] != '\0'; j++)
-		{
-			putchar(l[i].origin[j]);
-		}
-		while (j != 32)
-		{
-			putchar(' ');
-			j++;
-		}
-
-		for (j = 0; l[i].number[j] != '\0'; j++)
-		{
-			putchar(l[i].number[j]);
-		}
-		while (j != 16)
-		{
-			putchar(' ');
-			j++;
-		}
-
-		for (j = 0; l[i].airline[j] != '\0'; j++)
-		{
-			putchar(l[i].airline[j]);
-		}
-		while (j != 32)
-		{
-			putchar(' ');
-			j++;
-		}
-
+		for (j = 0; l[i].origin[j] != '\0'; j++) putchar(l[i].origin[j]);
+		while (j != 32) putchar(' '), j++;
+		for (j = 0; l[i].number[j] != '\0'; j++) putchar(l[i].number[j]);
+		while (j != 16) putchar(' '), j++;
+		for (j = 0; l[i].airline[j] != '\0'; j++) putchar(l[i].airline[j]);
+		while (j != 32) putchar(' '), j++;
 		switch (l[i].state)
 		{
-			case 'x':
-				printf("Cancelled\n");
-				break;
-			case 'c':
-				printf("Confirmed %s\n", l[i].stime);
-				break;
-			case 'l':
-				printf("Landed    %s\n", l[i].stime);
-				break;
-			case 'e':
-				printf("Expected  %s\n", l[i].stime);
-				break;
-			case 'f':
-				printf("Departed  %s\n", l[i].stime);
-				break;
-			case 'a':
-				printf("Expected  %s\n", l[i].stime);
-				break;
-			case 'g':
-				printf("Gate closed\n");
-				break;
-			case 't':
-				printf("Go to gate\n");
-				break;
-			case 'd':
-				printf("Gate open\n");
-				break;
-			case 's':
-				printf("Final call\n");
-				break;
-			case 'u':
-				printf("Unknown state. This is a bug..\n");
-				break;
-			case 'z':
-				printf("\n");
-				break;
-			default:
-				printf("Error!\n");
-				break;
+			case 'x': printf("Cancelled\n"); break;
+			case 'c': printf("Confirmed %s\n", l[i].stime); break;
+			case 'l': printf("Landed    %s\n", l[i].stime); break;
+			case 'e': printf("Expected  %s\n", l[i].stime); break;
+			case 'f': printf("Departed  %s\n", l[i].stime); break;
+			case 'a': printf("Expected  %s\n", l[i].stime); break;
+			case 'g': printf("Gate closed\n"); break;
+			case 't': printf("Go to gate\n"); break;
+			case 'd': printf("Gate open\n"); break;
+			case 's': printf("Final call\n"); break;
+			case 'u': printf("Unknown state. This is a bug..\n"); break;
+			case 'z': printf("\n"); break;
+			default: printf("Error!\n"); break;
 		}
 
 		for (j = 0; j < 128; j++)
 		{
-			if (j == 6)
-			{
-				putchar(':');
-			}
-			else
-			{
-				putchar('-');
-			}
+			if (j == 6) putchar(':');
+			else putchar('-');
 		}
 		putchar(10);
 	}
-
 	fclose(fp);
+	return 0;
 }
