@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 typedef struct
 {
@@ -127,9 +128,8 @@ int main(int argc, char** argv)
 		{
 			line[i] = c;
 		}
+		while (line[i - 1] == 13) i--;
 		line[i] = '\0';
-
-		//printf("%s\n", line);
 
 		if (strcmp("<table class=\"table-schedule\">", line) == 0)
 		{
@@ -154,6 +154,7 @@ int main(int argc, char** argv)
 		{
 			line[i] = c;
 		}
+		while (line[i - 1] == 13) i--;
 		line[i] = '\0';
 
 		//printf("%s\n", line);
@@ -179,7 +180,6 @@ int main(int argc, char** argv)
 			break;
 		}
 
-
 		/* IGNORE WHITESPACES */
 		for (; c == ' ' || c == '\t'; c = fgetc(fp));
 
@@ -188,11 +188,10 @@ int main(int argc, char** argv)
 		{
 			line[i] = c;
 		}
+		while (line[i - 1] == 13) i--;
 		line[i] = '\0';
 
-		//printf("%s\n", line);
-
-		if (line[1] == 't' && line[2] == 'r')
+		if (i == 0 || line[1] == 't' && line[2] == 'r')
 		{
 			/* NOP */
 		}
