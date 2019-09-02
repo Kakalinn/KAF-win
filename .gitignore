@@ -1,6 +1,7 @@
 *
 !.gitignore
 !build.bat
+!build.sh
 !update.bat
 !clean.bat
 !CONTRIBUTIONS.txt
@@ -15,6 +16,7 @@
 
 !newKAF/charlone.c
 !newKAF/rfr.bat
+!newKAF/rfr.sh
 !newKAF/intro.h
 !newKAF/wget.exe
 
